@@ -502,77 +502,73 @@ def create_feature_pipeline(comments_df, videos_df=None):
     print(f"      ✅ Step 6 completed in {step_time:.2f}s")
     
     # ========================================
-    # 7. FINAL FEATURE SELECTION FOR GMM - Step 7/7
+    # 7. TOP 20 FEATURE SELECTION - Step 7/7
     # ========================================
-    print("   🎯 [7/7] Final feature selection and matrix creation...")
+    print("   🎯 [7/7] Selecting TOP 20 most useful features...")
     step_start = time.time()
     
-    # Content-agnostic features for clustering (behavioral only - NO LANGUAGE FEATURES)
-    feature_columns = [
-        # Behavioral text features (language-agnostic)
-        'char_count', 'word_count', 'avg_word_length',
-        'caps_ratio', 'special_ratio', 'repetition_ratio',
-        
-        # Cross-domain emoji features
-        'emoji_count', 'emoji_ratio', 'emoji_diversity',
-        'emoji_sentiment_score', 'spam_emoji_indicator',
-        'beauty_emoji_count', 'music_emoji_count', 'food_emoji_count',
-        
-        # Universal engagement features
-        'likeCount', 'likes_per_char', 'is_reply',
-        
-        # Temporal patterns
-        'hour_of_day', 'day_of_week',
-        
-        # Spam behavior indicators (NO language-based features)
-        'is_generic', 'suspicious_engagement', 'excessive_caps',
-        'excessive_repetition', 'has_url', 'url_count',
-        
-        # Universal quality indicators
-        'sufficient_length', 'balanced_punctuation', 
-        'meaningful_emoji_usage', 'authentic_engagement'
+    # TOP 20 MOST USEFUL FEATURES (Base dataset + engineered features)
+    # Base dataset features (10) - MUST KEEP
+    base_features = [
+        'kind', 'commentId', 'channelId', 'videoId', 'authorId', 
+        'textOriginal', 'parentCommentId', 'likeCount', 'publishedAt', 'updatedAt'
     ]
     
-    # Add video context features if available (NONE since video merge skipped)
-    # No video features available
+    # Top 10 engineered features for ML (behavioral patterns)
+    engineered_features = [
+        'char_count',         # Text length (spam detection)
+        'word_count',         # Content substance
+        'caps_ratio',         # KEY: Spam indicator
+        'repetition_ratio',   # Bot/spam behavior
+        'emoji_ratio',        # KEY: Expression patterns
+        'emoji_diversity',    # KEY: Authentic emoji usage
+        'likes_per_char',     # Engagement efficiency
+        'is_reply',           # Context indicator
+        'url_count',          # Link spam detection
+        'is_generic'          # Template/bot detection
+    ]
     
-    # Fill missing values
-    for col in feature_columns:
+    # Combine for top 20 features
+    feature_columns = base_features + engineered_features
+    
+    # Fill missing values for engineered features only
+    for col in engineered_features:
         if col in features_df.columns:
             features_df[col] = features_df[col].fillna(0)
     
-    # Create final feature matrix
+    # Create final feature matrix (all 20 columns)
     available_features = [col for col in feature_columns if col in features_df.columns]
-    X = features_df[available_features].copy()
     
-    # Use cleaned original text for analysis
+    # For ML training, we'll use only the engineered features (not base dataset columns)
+    ml_features = [col for col in engineered_features if col in features_df.columns]
+    X = features_df[ml_features].copy()  # Only engineered features for ML
+    
+    # Store both full dataset and ML features
     processed_data = {
-        'features': X,
-        'text': features_df['cleaned_text'],  # Use cleaned original text
+        'features': X,                              # Only engineered features for ML
+        'full_data': features_df[available_features], # All 20 features for export
+        'text': features_df['cleaned_text'],
         'original_data': features_df,
-        'feature_names': available_features
+        'feature_names': ml_features,               # Only engineered feature names
+        'all_feature_names': available_features     # All 20 feature names
     }
     
     end_time = time.time()
     total_time = end_time - start_time
     step_time = time.time() - step_start
     print(f"      ✅ Step 7 completed in {step_time:.2f}s")
-    print(f"   ✅ OPTIMIZED feature engineering completed in {total_time:.2f} seconds")
-    print(f"   📊 Generated {len(available_features)} behavioral features")
+    print(f"   ✅ TOP 20 feature selection completed in {total_time:.2f} seconds")
+    print(f"   📊 Selected {len(available_features)} total features (10 base + 10 engineered)")
+    print(f"   🤖 Generated {len(ml_features)} features for ML training")
     print(f"   🚀 Processing rate: {total_comments/total_time:.0f} comments/second")
     
     return processed_data
 
-print("✅ OPTIMIZED feature engineering pipeline created!")
-print("\n🎯 Enhanced Features - LANGUAGE FEATURES REMOVED:")
-print("   📝 Text: Bot-like patterns analyzed on original text")
-print("   😊 Emoji: Cross-cultural emoji analysis on original text")
-print("   📊 Engagement: Universal authenticity indicators")
-print("   ❌ Language: Features COMPLETELY REMOVED for performance")
-print("   🕐 Temporal: Universal posting patterns")
-print("   🚫 Spam: Behavioral patterns only (no language)")
-print("   ⭐ Quality: Universal meaningful engagement patterns")
-print("   🚀 Result: Maximum performance with no language dependencies!")
+print("✅ TOP 20 FEATURE pipeline created!")
+print("\n🎯 Streamlined Features:")
+print("   � Base Dataset (10): kind, commentId, channelId, videoId, authorId, textOriginal, parentCommentId, likeCount, publishedAt, updatedAt")  
+print("   🤖 ML Features (10): char_count, word_count, caps_ratio, repetition_ratio, emoji_ratio, emoji_diversity, likes_per_char, is_reply, url_count, is_generic")
+print("   🚀 Result: Focused on most impactful features for spam detection!")
 
 # Process FULL dataset through feature engineering pipeline
 print("� Processing FULL dataset through feature engineering pipeline...\n")
@@ -622,46 +618,41 @@ def prepare_clustering_data(processed_data, scale_features=True):
     print("🌀 Preparing data for content-agnostic GMM clustering...\n")
     
     # ========================================
-    # 1. CONTENT-AGNOSTIC FEATURE SELECTION
+    # 1. TOP 10 ML FEATURE SELECTION
     # ========================================
     
-    # Select features that work across all content domains
+    # Use only the top 10 engineered features for ML clustering
     clustering_features = [
-        # Behavioral text complexity (universal)
-        'char_count', 'word_count', 'avg_word_length',
+        # Core behavioral indicators (5)
+        'char_count',         # Text length spam detection
+        'caps_ratio',         # Spam behavior indicator  
+        'repetition_ratio',   # Bot detection
+        'emoji_ratio',        # Expression authenticity
+        'emoji_diversity',    # Authentic emoji usage
         
-        # Bot-like behavior indicators (universal)
-        'caps_ratio', 'special_ratio', 'repetition_ratio',
-        'is_generic', 'excessive_caps', 'excessive_repetition', 'url_count',
+        # Engagement patterns (3)
+        'likes_per_char',     # Engagement efficiency
+        'is_reply',           # Context indicator
+        'url_count',          # Link spam detection
         
-        # Cross-domain emoji patterns
-        'emoji_count', 'emoji_ratio', 'emoji_diversity',
-        'emoji_sentiment_score', 'spam_emoji_indicator',
-        
-        # Universal engagement authenticity
-        'likeCount', 'likes_per_char', 'is_reply',
-        'suspicious_engagement', 'authentic_engagement',
-        
-        # Quality indicators (work across domains)
-        'sufficient_length', 'balanced_punctuation', 'meaningful_emoji_usage'
+        # Content quality (2)
+        'word_count',         # Content substance
+        'is_generic'          # Template detection
     ]
-    
-    # Add video context features if available (NONE since video merge skipped)
-    # No video features available
     
     # Select available features
     available_features = [f for f in clustering_features if f in X_features.columns]
     X_clustering = X_features[available_features].copy()
     
-    print(f"📊 Selected {len(available_features)} content-agnostic features:")
-    print("   🎯 Behavioral patterns that work across beauty, gaming, food, education:")
+    print(f"📊 Selected {len(available_features)} TOP ML features for spam detection:")
+    print("   🎯 Most impactful behavioral patterns:")
     for i, feature in enumerate(available_features):
-        category = "🤖 Bot-like" if feature in ['caps_ratio', 'repetition_ratio', 'is_generic'] else \
+        category = "🤖 Spam" if feature in ['caps_ratio', 'repetition_ratio', 'is_generic'] else \
                    "😊 Emoji" if 'emoji' in feature else \
-                   "📊 Engagement" if feature in ['likeCount', 'likes_per_char'] else \
-                   "⭐ Quality" if feature in ['sufficient_length', 'balanced_punctuation'] else \
-                   "📝 Text"
-        print(f"   {i+1:2d}. {feature:<25} ({category})")
+                   "📊 Engagement" if feature in ['likes_per_char', 'is_reply', 'url_count'] else \
+                   "📝 Content" if feature in ['char_count', 'word_count'] else \
+                   "🎯 Other"
+        print(f"   {i+1:2d}. {feature:<20} ({category})")
     
     # ========================================
     # 2. DATA QUALITY CHECKS
@@ -743,11 +734,11 @@ def prepare_clustering_data(processed_data, scale_features=True):
     # 5. CLUSTERING READINESS SUMMARY
     # ========================================
     
-    print(f"\n🎯 Data ready for content-agnostic GMM clustering:")
+    print(f"\n🎯 Data ready for TOP 10 feature spam detection:")
     print(f"   📊 Shape: {X_clustering_final.shape}")
-    print(f"   📋 Features: {len(available_features)} behavioral indicators")
-    print(f"   💬 Comments: {len(X_clustering_final):,} from diverse content")
-    print(f"   🌀 Ready for: 2-component GMM with uncertainty handling")
+    print(f"   📋 Features: {len(available_features)} most impactful indicators")
+    print(f"   💬 Comments: {len(X_clustering_final):,} ready for classification")
+    print(f"   🌀 Ready for: Optimized 2-component GMM clustering")
     
     return {
         'X_clustering': X_clustering_final,
@@ -1017,12 +1008,12 @@ joblib.dump(model_artifacts, model_filename)
 print(f"✅ Model saved successfully as: {model_filename}")
 
 # ========================================
-# COMPLETE CSV EXPORT (All comments: spam + quality + uncertain)
+# STREAMLINED CSV EXPORT (TOP 20 FEATURES)
 # ========================================
-print(f"\n📤 Creating complete CSV export with ALL comments (spam + quality + uncertain)...")
+print(f"\n📤 Creating streamlined CSV export with TOP 20 FEATURES...")
 
-# Include ALL comments (no filtering)
-complete_original_data = clustering_data['original_data'].copy()
+# Use the full_data that contains all 20 features (10 base + 10 engineered)
+complete_original_data = processed_data['full_data'].copy()
 
 print(f"   🔍 Export details:")
 print(f"      📊 Total comments: {len(final_labels):,}")
@@ -1030,26 +1021,24 @@ print(f"      🚫 Spam: {(final_labels == 'spam').sum():,}")
 print(f"      ✅ Quality: {(final_labels == 'quality').sum():,}")
 print(f"      🤔 Uncertain: {(final_labels == 'uncertain').sum():,}")
 
-# Add engineered features to complete comments dataframe
-print(f"   📊 Adding {len(clustering_data['feature_names'])} engineered features...")
-complete_features = clustering_data['X_clustering']
-
-# Add features with prefix
-for i, feature_name in enumerate(clustering_data['feature_names']):
-    complete_original_data[f'feature_{feature_name}'] = complete_features.iloc[:, i].values
-
-# Add final classification and confidence
+# Add final classification and confidence to the 20-feature dataset
 complete_original_data['spam_classification'] = final_labels
 complete_original_data['classification_confidence'] = max_probabilities
 
-# Export final complete CSV
-output_filename = 'complete_comments_with_features.csv'
+# Export streamlined CSV with only TOP 20 features
+output_filename = 'complete_comments_top20_features.csv'
 complete_original_data.to_csv(output_filename, index=False, encoding='utf-8')
 
-print(f"\n✅ Complete dataset exported successfully!")
+print(f"\n✅ Streamlined dataset exported successfully!")
 print(f"   📁 Filename: {output_filename}")
 print(f"   📊 Total rows: {len(complete_original_data):,}")
-print(f"   📈 Columns: {len(complete_original_data.columns)} (original + features + classification)")
+print(f"   📈 Features: 20 TOTAL (10 base dataset + 10 engineered + 2 classification)")
+
+# Show the 20 feature structure
+print(f"\n📋 TOP 20 FEATURE STRUCTURE:")
+print(f"   📊 Base Dataset (10): kind, commentId, channelId, videoId, authorId, textOriginal, parentCommentId, likeCount, publishedAt, updatedAt")
+print(f"   🤖 Engineered (10): char_count, word_count, caps_ratio, repetition_ratio, emoji_ratio, emoji_diversity, likes_per_char, is_reply, url_count, is_generic")
+print(f"   🎯 Classification (2): spam_classification, classification_confidence")
 
 # Final summary
 spam_count = (complete_original_data['spam_classification'] == 'spam').sum()
@@ -1062,13 +1051,14 @@ print(f"   ✅ Quality comments: {quality_count:,} ({quality_count/len(complete_
 print(f"   🤔 Uncertain comments: {uncertain_count:,} ({uncertain_count/len(complete_original_data)*100:.1f}%)")
 
 print(f"\n🎯 Files Generated:")
-print(f"   1. {model_filename} - Complete trained model for future use")
-print(f"   2. {output_filename} - Complete dataset with features and classifications")
+print(f"   1. {model_filename} - Optimized model (10 features)")
+print(f"   2. {output_filename} - Streamlined dataset (20 features total)")
 
-print(f"\n🎉 FULL DATASET PROCESSING COMPLETE!")
+print(f"\n🎉 STREAMLINED PROCESSING COMPLETE!")
 print(f"   📊 Processed {len(comments_df):,} total comments")
 print(f"   📊 Delivered {len(complete_original_data):,} classified comments")
-print(f"   💾 Model and data ready for deployment!")
+print(f"   � Model optimized with only 10 most useful features!")
+print(f"   💾 Dataset streamlined to 20 essential features!")
 
 # ========================================
 # 📝 EXAMPLES: Show 5 samples from each category
