@@ -19,12 +19,12 @@ import {
 import {
   VideoLibrary as VideoIcon,
   Comment as CommentIcon,
-  Topic as TopicIcon,
   Security as SecurityIcon,
   TrendingUp as TrendingIcon,
   ThumbUp as LikeIcon,
   Warning as WarningIcon,
-  Analytics as AnalyticsIcon
+  Analytics as AnalyticsIcon,
+  Topic as TopicIcon
 } from '@mui/icons-material';
 import {
   BarChart,
@@ -63,35 +63,41 @@ const topicChartData = topicDistribution.slice(0, 6).map(topic => ({
 }));
 
 const qualityChartData = [
-  { name: 'Quality', value: qualityMetrics.quality_comments, color: '#4CAF50' },
-  { name: 'Spam', value: qualityMetrics.spam_comments, color: '#F44336' },
-  { name: 'Uncertain', value: qualityMetrics.uncertain_comments, color: '#FF9800' }
+  { name: 'Quality', value: qualityMetrics.quality_comments, color: '#00FF88' },
+  { name: 'Spam', value: qualityMetrics.spam_comments, color: '#FF3D5A' },
+  { name: 'Uncertain', value: qualityMetrics.uncertain_comments, color: '#FFD600' }
 ];
 
 const COLORS = ['#FF6900', '#00C7BE', '#8E24AA', '#43A047', '#1E88E5', '#FB8C00'];
 
 const Dashboard: React.FC = () => {
-  const StatCard = ({ icon, title, value, subtitle, color, progress }: any) => (
-    <Card sx={{ height: '100%' }}>
+  const StatCard = ({ title, value, subtitle, color, progress }: any) => (
+    <Card sx={{ 
+      height: '100%',
+      background: 'rgba(20,25,40,0.7)',
+      boxShadow: `0 0 32px 0 ${color === 'primary' ? '#00E5FF55' : color === 'success' ? '#00FF8855' : color === 'info' ? '#00E5FF55' : '#FF4DFF55'}`,
+      border: `1px solid ${color === 'primary' ? 'rgba(0,229,255,0.3)' : color === 'success' ? 'rgba(0,255,136,0.3)' : color === 'info' ? 'rgba(0,229,255,0.3)' : 'rgba(255,77,255,0.3)'}`,
+      backdropFilter: 'blur(8px)',
+      borderRadius: 4,
+    }}>
       <CardContent>
-        <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-          <Box sx={{ 
-            backgroundColor: `${color}.main`, 
-            borderRadius: 2, 
-            p: 1, 
-            mr: 2,
-            color: 'white'
-          }}>
-            {icon}
-          </Box>
-          <Typography variant="h6" component="div" sx={{ color: 'text.secondary' }}>
+        <Box sx={{ mb: 2 }}>
+          <Typography variant="h6" component="div" sx={{ color: 'text.secondary', mb: 1, fontSize: '1.1rem' }}>
             {title}
           </Typography>
-        </Box>
-        <Typography variant="h4" component="div" sx={{ fontWeight: 'bold', mb: 1 }}>
+          <Typography variant="h3" component="div" sx={{ 
+            fontWeight: 'bold', 
+            fontSize: '3rem', 
+            background: `linear-gradient(90deg, ${color === 'primary' ? '#00E5FF, #FF4DFF' : color === 'success' ? '#00FF88, #00E5FF' : color === 'info' ? '#00E5FF, #FF4DFF' : '#FF4DFF, #FF3D5A'})`, 
+            WebkitBackgroundClip: 'text', 
+            WebkitTextFillColor: 'transparent', 
+            fontFamily: 'Orbitron, Inter, Roboto, Arial, sans-serif',
+            lineHeight: 1.2
+          }}>
           {value}
         </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+          </Box>
+        <Typography variant="body2" color="text.secondary" sx={{ mb: 2, ml: 1 }}>
           {subtitle}
         </Typography>
         {progress && (
@@ -101,9 +107,10 @@ const Dashboard: React.FC = () => {
             sx={{ 
               height: 8, 
               borderRadius: 4,
-              backgroundColor: 'grey.200',
+              backgroundColor: 'rgba(255,255,255,0.1)',
               '& .MuiLinearProgress-bar': {
-                backgroundColor: `${color}.main`
+                background: `linear-gradient(90deg, ${color === 'primary' ? '#00E5FF, #FF4DFF' : color === 'success' ? '#00FF88, #00E5FF' : color === 'info' ? '#00E5FF, #FF4DFF' : '#FF4DFF, #FF3D5A'})`,
+                borderRadius: 4
               }
             }} 
           />
@@ -113,18 +120,7 @@ const Dashboard: React.FC = () => {
   );
 
   return (
-    <Box>
-      <Typography variant="h4" gutterBottom sx={{ mb: 3, fontWeight: 'bold' }}>
-        L'Oréal AI Comment Analytics Dashboard
-      </Typography>
-      
-      <Box sx={{ display: 'flex', gap: 2, mb: 3, flexWrap: 'wrap' }}>
-        <Chip label="Real-time Analysis" color="primary" />
-        <Chip label="Machine Learning Powered" color="secondary" />
-        <Chip label={`${((qualityMetrics.quality_comments / qualityMetrics.total_comments) * 100).toFixed(1)}% Accuracy`} color="success" />
-        <Chip label={`${qualityMetrics.topics_discovered} Topics Discovered`} color="info" />
-        <Chip label={`${(qualityMetrics.total_comments / 1000000).toFixed(1)}M Comments Analyzed`} color="default" />
-      </Box>
+    <Box sx={{ width: '100%', p: 4 }}>
 
       {/* Key Metrics Cards */}
       <Box sx={{ 
@@ -134,7 +130,6 @@ const Dashboard: React.FC = () => {
         mb: 4 
       }}>
         <StatCard
-          icon={<VideoIcon />}
           title="Videos Analyzed"
           value={qualityMetrics.total_videos.toLocaleString()}
           subtitle="Across all beauty categories"
@@ -142,7 +137,6 @@ const Dashboard: React.FC = () => {
           progress={85}
         />
         <StatCard
-          icon={<CommentIcon />}
           title="Quality Comments"
           value={`${(qualityMetrics.quality_comments / 1000000).toFixed(2)}M`}
           subtitle={`${((qualityMetrics.quality_comments / qualityMetrics.total_comments) * 100).toFixed(1)}% of total comments`}
@@ -150,7 +144,6 @@ const Dashboard: React.FC = () => {
           progress={Math.round((qualityMetrics.quality_comments / qualityMetrics.total_comments) * 100)}
         />
         <StatCard
-          icon={<TopicIcon />}
           title="Topics Discovered"
           value={qualityMetrics.topics_discovered.toString()}
           subtitle={`Coherence score: ${qualityMetrics.model_coherence}`}
@@ -158,154 +151,361 @@ const Dashboard: React.FC = () => {
           progress={75}
         />
         <StatCard
-          icon={<SecurityIcon />}
           title="Spam Detected"
           value={`${Math.round(qualityMetrics.spam_comments / 1000)}K`}
           subtitle={`${((qualityMetrics.spam_comments / qualityMetrics.total_comments) * 100).toFixed(1)}% filtered out`}
           color="error"
           progress={Math.round((qualityMetrics.quality_comments / qualityMetrics.total_comments) * 100)}
         />
-      </Box>
+        </Box>
 
       {/* Charts Section */}
       <Box sx={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 3, mb: 3 }}>
-        <Paper sx={{ p: 3, height: 400 }}>
-          <Typography variant="h6" gutterBottom>
-            Top Video Topics Distribution
-          </Typography>
-          <ResponsiveContainer width="100%" height={320}>
-            <BarChart data={topicChartData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip 
-                formatter={(value: any, name: string) => [
-                  `${value.toLocaleString()} videos (${
-                    topicChartData.find(d => d.videos === value)?.percentage || 0
-                  }%)`,
-                  'Videos'
-                ]}
-              />
-              <Bar dataKey="videos" fill="#FF6900" radius={4} />
-            </BarChart>
-          </ResponsiveContainer>
-        </Paper>
+          <Paper sx={{
+            p: 3, mb: 3, borderRadius: 4,
+            background: 'rgba(20,25,40,0.7)',
+            boxShadow: '0 0 32px 0 #00E5FF55',
+            border: '1px solid rgba(0,229,255,0.3)',
+            backdropFilter: 'blur(8px)',
+          }}>
+            <Typography
+              variant="h6"
+              gutterBottom
+              sx={{
+                fontFamily: 'Orbitron, Inter, Roboto, Arial, sans-serif',
+                fontWeight: 600,
+                fontSize: '1.3rem',
+                background: 'linear-gradient(90deg, #00E5FF, #FF4DFF)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                mb: 2,
+              }}>
+              Top Video Topics Distribution
+            </Typography>
+            <ResponsiveContainer width="100%" height={320}>
+              <BarChart data={topicChartData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" stroke="#E0E0E0" />
+                <YAxis stroke="#9BA0B0" />
+                <Tooltip contentStyle={{ background: '#181C2F', color: '#00E5FF', borderRadius: 12, boxShadow: '0 0 12px #00E5FF88' }} />
+                <Bar
+                  dataKey="videos"
+                  radius={[12, 12, 12, 12]}
+                  fill="url(#neonBarGradient)"
+                  stroke="#00E5FF"
+                  strokeWidth={2}
+                  isAnimationActive={true}
+                />
+                <defs>
+                  <linearGradient id="neonBarGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#00E5FF" />
+                    <stop offset="100%" stopColor="#FF4DFF" />
+                  </linearGradient>
+                </defs>
+              </BarChart>
+            </ResponsiveContainer>
+          </Paper>
         
-        <Paper sx={{ p: 3, height: 400 }}>
-          <Typography variant="h6" gutterBottom>
-            Comment Quality Breakdown
-          </Typography>
-          <ResponsiveContainer width="100%" height={320}>
-            <PieChart>
-              <Pie
-                data={qualityChartData}
-                cx="50%"
-                cy="50%"
-                innerRadius={60}
-                outerRadius={120}
-                paddingAngle={2}
-                dataKey="value"
-              >
-                {qualityChartData.map((entry: any, index: number) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
-                ))}
-              </Pie>
-              <Tooltip 
-                formatter={(value: any) => [value.toLocaleString(), 'Comments']}
-              />
-            </PieChart>
-          </ResponsiveContainer>
-          <Box sx={{ mt: 2 }}>
-            {qualityChartData.map((entry: any, index: number) => (
-              <Box key={index} sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                <Box sx={{ 
-                  width: 16, 
-                  height: 16, 
-                  backgroundColor: entry.color, 
-                  borderRadius: 1,
-                  mr: 1
-                }} />
-                <Typography variant="body2">
-                  {entry.name}: {entry.value.toLocaleString()}
-                </Typography>
-              </Box>
-            ))}
+          <Paper sx={{
+            p: 3, mb: 3, borderRadius: 4,
+            background: 'rgba(20,25,40,0.7)',
+          boxShadow: '0 0 32px 0 #00E5FF55',
+          border: '1px solid rgba(0,229,255,0.3)',
+            backdropFilter: 'blur(8px)',
+          }}>
+            <Typography
+              variant="h6"
+              gutterBottom
+              sx={{
+                fontFamily: 'Orbitron, Inter, Roboto, Arial, sans-serif',
+                fontWeight: 600,
+                fontSize: '1.3rem',
+              background: 'linear-gradient(90deg, #00E5FF, #00FF88)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                mb: 2,
+              }}>
+              Comment Quality Breakdown
+            </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+            <Box sx={{ flex: '0 0 60%' }}>
+            <ResponsiveContainer width="100%" height={320}>
+              <PieChart>
+                <Pie
+                  data={qualityChartData}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={60}
+                  outerRadius={120}
+                  paddingAngle={2}
+                  dataKey="value"
+                  stroke="#222"
+                  strokeWidth={3}
+                  isAnimationActive={true}
+                >
+                  <Cell fill="url(#qualityGreen)" />
+                  <Cell fill="url(#spamRed)" />
+                  <Cell fill="url(#uncertainYellow)" />
+                </Pie>
+                <Tooltip 
+                    formatter={(value: any, name: string) => [`${value.toLocaleString()} (${((value / qualityMetrics.total_comments) * 100).toFixed(1)}%)`, name]}
+                    contentStyle={{ background: '#181C2F', color: '#FF3D5A', borderRadius: 12, boxShadow: '0 0 12px #FF3D5A88' }}
+                />
+                <defs>
+                  <radialGradient id="qualityGreen" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stopColor="#00FF88" />
+                    <stop offset="100%" stopColor="#00E5FF" />
+                  </radialGradient>
+                  <radialGradient id="spamRed" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stopColor="#FF3D5A" />
+                    <stop offset="100%" stopColor="#FF4DFF" />
+                  </radialGradient>
+                  <radialGradient id="uncertainYellow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stopColor="#FFD600" />
+                      <stop offset="100%" stopColor="#FFA726" />
+                  </radialGradient>
+                </defs>
+              </PieChart>
+            </ResponsiveContainer>
+            </Box>
+            <Box sx={{ flex: '0 0 40%', display: 'flex', flexDirection: 'column', gap: 2, pr: 2 }}>
+              {qualityChartData.map((item, index) => (
+                <Box key={item.name} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                  <Box
+                    sx={{
+                      width: 20,
+                      height: 20,
+                      borderRadius: '50%',
+                      background: item.color,
+                      boxShadow: `0 0 12px ${item.color}88`,
+                    }}
+                  />
+                  <Box sx={{ flexGrow: 1 }}>
+                    <Typography variant="body1" sx={{ color: 'white', fontWeight: 600 }}>
+                      {item.name}
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                      {item.value.toLocaleString()} comments ({((item.value / qualityMetrics.total_comments) * 100).toFixed(1)}%)
+                    </Typography>
+                  </Box>
+                </Box>
+              ))}
+            </Box>
           </Box>
-        </Paper>
+          </Paper>
       </Box>
 
-      <Paper sx={{ p: 3, height: 300, mb: 3 }}>
-        <Typography variant="h6" gutterBottom>
+      <Paper sx={{ 
+        p: 3, 
+        height: 400, 
+        mb: 3, 
+        background: 'rgba(20,25,40,0.7)',
+        boxShadow: '0 0 32px 0 #00FF8855',
+        border: '1px solid rgba(0,255,136,0.3)',
+        backdropFilter: 'blur(8px)',
+        borderRadius: 4,
+      }}>
+        <Typography 
+          variant="h6" 
+          gutterBottom
+          sx={{
+            fontFamily: 'Orbitron, Inter, Roboto, Arial, sans-serif',
+            fontWeight: 600,
+            fontSize: '1.3rem',
+            background: 'linear-gradient(90deg, #00FF88, #00E5FF)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            mb: 2,
+          }}
+        >
           Quality & Engagement Trends
         </Typography>
-        <ResponsiveContainer width="100%" height={220}>
+        <ResponsiveContainer width="100%" height={320}>
           <AreaChart data={engagementTrends}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="month" />
-            <YAxis />
-            <Tooltip />
+            <defs>
+              <linearGradient id="qualityGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#00FF88" stopOpacity={0.8}/>
+                <stop offset="95%" stopColor="#00E5FF" stopOpacity={0.1}/>
+              </linearGradient>
+              <linearGradient id="spamGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#FF4DFF" stopOpacity={0.8}/>
+                <stop offset="95%" stopColor="#FF3D5A" stopOpacity={0.1}/>
+              </linearGradient>
+            </defs>
+            <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+            <XAxis 
+              dataKey="month" 
+              stroke="#E0E0E0"
+              fontSize={12}
+              tick={{ fill: '#9BA0B0' }}
+            />
+            <YAxis 
+              stroke="#9BA0B0"
+              fontSize={12}
+              tick={{ fill: '#9BA0B0' }}
+            />
+            <Tooltip 
+              contentStyle={{ 
+                background: '#181C2F', 
+                color: '#00FF88', 
+                borderRadius: 12, 
+                boxShadow: '0 0 12px #00FF8888',
+                border: '1px solid rgba(0,255,136,0.3)'
+              }} 
+            />
             <Area 
               type="monotone" 
               dataKey="quality" 
               stackId="1"
-              stroke="#4CAF50" 
-              fill="#4CAF50" 
-              fillOpacity={0.6}
+              stroke="#00FF88" 
+              strokeWidth={3}
+              fill="url(#qualityGradient)"
+              fillOpacity={1}
             />
             <Area 
               type="monotone" 
               dataKey="spam" 
               stackId="1"
-              stroke="#F44336" 
-              fill="#F44336" 
-              fillOpacity={0.6}
+              stroke="#FF4DFF" 
+              strokeWidth={3}
+              fill="url(#spamGradient)"
+              fillOpacity={1}
             />
           </AreaChart>
         </ResponsiveContainer>
-      </Paper>
+        </Paper>
 
       {/* Spam Analysis Section */}
       <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 3, mb: 3 }}>
-        <Paper sx={{ p: 3 }}>
-          <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <WarningIcon color="error" />
+        <Paper sx={{ 
+          p: 3,
+          background: 'rgba(20,25,40,0.7)',
+          boxShadow: '0 0 32px 0 #FF3D5A55',
+          border: '1px solid rgba(255,61,90,0.3)',
+          backdropFilter: 'blur(8px)',
+          borderRadius: 4,
+        }}>
+          <Typography 
+            variant="h6" 
+            gutterBottom 
+            sx={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: 1,
+              fontFamily: 'Orbitron, Inter, Roboto, Arial, sans-serif',
+              fontWeight: 600,
+              fontSize: '1.2rem',
+              background: 'linear-gradient(90deg, #FF3D5A, #FF4DFF)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}
+          >
+            <WarningIcon sx={{ color: '#FF3D5A' }} />
             High-Confidence Spam Comments
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
             Real spam examples detected by our ML model with 99%+ confidence
           </Typography>
           <Box sx={{ maxHeight: 300, overflowY: 'auto' }}>
-            {spamSamples.slice(0, 5).map((comment, index) => (
-              <Box key={comment.commentId} sx={{ 
-                p: 2, 
-                mb: 2, 
-                backgroundColor: 'error.main', 
-                borderRadius: 2,
-                color: 'error.contrastText',
-                opacity: 0.9
-              }}>
-                <Typography variant="body2" sx={{ fontWeight: 'bold', mb: 1 }}>
-                  "{comment.textOriginal}"
-                </Typography>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <Chip 
-                    label={`${(comment.classification_confidence * 100).toFixed(1)}% confidence`}
-                    size="small"
-                    sx={{ backgroundColor: 'rgba(255,255,255,0.2)' }}
-                  />
-                  <Typography variant="caption">
-                    {comment.spam_features.caps_ratio > 0.5 && "HIGH CAPS"} 
-                    {comment.spam_features.emoji_ratio > 0.3 && " EMOJI SPAM"}
-                  </Typography>
-                </Box>
-              </Box>
-            ))}
+              {spamSamples.map((comment, idx) => {
+                const accent = 'linear-gradient(90deg, #FF3D5A, #FF4DFF)';
+                const glow = '#FF3D5A';
+                const spamReasons = [];
+                if (comment.spam_features) {
+                  if (comment.spam_features.caps_ratio > 0.5) spamReasons.push('HIGH CAPS');
+                  if (comment.spam_features.emoji_ratio > 0.3) spamReasons.push('EMOJI SPAM');
+                  if (comment.textOriginal && comment.textOriginal.length < 5) spamReasons.push('SHORT SPAM');
+                  if (comment.spam_features.repetition_ratio > 0.3) spamReasons.push('REPETITIVE');
+                }
+                // Fallback reason if no specific features detected
+                if (spamReasons.length === 0) {
+                  spamReasons.push('SPAM DETECTED');
+                }
+                return (
+                  <Box key={idx} sx={{
+                    background: 'rgba(20,25,40,0.85)',
+                    borderRadius: 3,
+                    p: 2,
+                    mb: 2,
+                    boxShadow: `0 4px 24px ${glow}88`,
+                    fontWeight: 500,
+                    position: 'relative',
+                    border: `1px solid ${glow}99`,
+                    transition: 'transform 0.2s, box-shadow 0.2s',
+                    backdropFilter: 'blur(4px)',
+                    '&:hover': {
+                      transform: 'translateY(-4px) scale(1.03)',
+                      boxShadow: `0 8px 32px ${glow}`,
+                    },
+                  }}>
+                    <Box sx={{
+                      fontSize: '1.1rem',
+                      mb: 1,
+                      background: accent,
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      fontFamily: 'Orbitron, Inter, Roboto, Arial, sans-serif',
+                    }}>{comment.textOriginal}</Box>
+                    <Box sx={{ fontSize: '0.85rem', color: glow, fontWeight: 600 }}>{(comment.classification_confidence * 100).toFixed(1)}% confidence</Box>
+                    <Box sx={{ 
+                      position: 'absolute', 
+                      right: 16, 
+                      top: 16,
+                      display: 'flex',
+                      flexDirection: 'row',
+                      gap: 0.5,
+                      flexWrap: 'wrap',
+                      alignItems: 'flex-start',
+                      justifyContent: 'flex-end'
+                    }}>
+                      {spamReasons.map((reason, reasonIdx) => (
+                        <Box key={reasonIdx} sx={{ 
+                          fontSize: '0.7rem', 
+                          fontWeight: 600,
+                          color: '#FF3D5A',
+                          backgroundColor: 'rgba(255,61,90,0.1)',
+                          border: '1px solid #FF3D5A',
+                          borderRadius: '50px',
+                          px: 1,
+                          py: 0.2,
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.3px',
+                          whiteSpace: 'nowrap',
+                          flexShrink: 0
+                        }}>
+                          {reason}
+                        </Box>
+                      ))}
+                    </Box>
+                  </Box>
+                );
+              })}
           </Box>
         </Paper>
-
-        <Paper sx={{ p: 3 }}>
-          <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <AnalyticsIcon color="primary" />
+      <Paper sx={{ 
+        p: 3,
+        background: 'rgba(20,25,40,0.7)',
+        boxShadow: '0 0 32px 0 #00E5FF55',
+        border: '1px solid rgba(0,229,255,0.3)',
+        backdropFilter: 'blur(8px)',
+        borderRadius: 4,
+      }}>
+          <Typography 
+            variant="h6" 
+            gutterBottom 
+            sx={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: 1,
+              fontFamily: 'Orbitron, Inter, Roboto, Arial, sans-serif',
+              fontWeight: 600,
+              fontSize: '1.2rem',
+              background: 'linear-gradient(90deg, #00E5FF, #FF4DFF)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}
+          >
+            <AnalyticsIcon sx={{ color: '#00E5FF' }} />
             Top Video Performance
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
@@ -350,104 +550,7 @@ const Dashboard: React.FC = () => {
         </Paper>
       </Box>
 
-      {/* Topic Keywords Insights */}
-      <Paper sx={{ p: 3, mb: 3 }}>
-        <Typography variant="h6" gutterBottom>
-          Topic Keywords Analysis
-        </Typography>
-        <Box sx={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-          gap: 3 
-        }}>
-          {topicDistribution.slice(0, 6).map((topic) => (
-            <Card key={topic.topic_id} variant="outlined">
-              <CardContent>
-                <Typography variant="subtitle1" gutterBottom color="primary">
-                  {topic.name}
-                </Typography>
-                <Typography variant="body2" color="text.secondary" gutterBottom>
-                  {topic.videos.toLocaleString()} videos ({topic.percentage}%)
-                </Typography>
-                <Divider sx={{ my: 1 }} />
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-                  {topic.keywords.map((keyword) => (
-                    <Chip 
-                      key={keyword}
-                      label={keyword} 
-                      size="small" 
-                      variant="outlined" 
-                      sx={{ fontSize: '0.75rem' }}
-                    />
-                  ))}
                 </Box>
-              </CardContent>
-            </Card>
-          ))}
-        </Box>
-      </Paper>
-
-      {/* Quick Actions */}
-      <Paper sx={{ p: 3 }}>
-        <Typography variant="h6" gutterBottom>
-          Quick Actions
-        </Typography>
-        <Box sx={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
-          gap: 2 
-        }}>
-          <Card sx={{ 
-            cursor: 'pointer', 
-            '&:hover': { boxShadow: 4 },
-            textAlign: 'center',
-            p: 2
-          }}>
-            <TopicIcon color="primary" sx={{ fontSize: 40, mb: 1 }} />
-            <Typography variant="h6">Explore Topics</Typography>
-            <Typography variant="body2" color="text.secondary">
-              Dive into 26 discovered topics
-            </Typography>
-          </Card>
-          <Card sx={{ 
-            cursor: 'pointer', 
-            '&:hover': { boxShadow: 4 },
-            textAlign: 'center',
-            p: 2
-          }}>
-            <VideoIcon color="primary" sx={{ fontSize: 40, mb: 1 }} />
-            <Typography variant="h6">Video Analysis</Typography>
-            <Typography variant="body2" color="text.secondary">
-              Analyze individual videos
-            </Typography>
-          </Card>
-          <Card sx={{ 
-            cursor: 'pointer', 
-            '&:hover': { boxShadow: 4 },
-            textAlign: 'center',
-            p: 2
-          }}>
-            <SecurityIcon color="primary" sx={{ fontSize: 40, mb: 1 }} />
-            <Typography variant="h6">Spam Detection</Typography>
-            <Typography variant="body2" color="text.secondary">
-              Review spam patterns
-            </Typography>
-          </Card>
-          <Card sx={{ 
-            cursor: 'pointer', 
-            '&:hover': { boxShadow: 4 },
-            textAlign: 'center',
-            p: 2
-          }}>
-            <TrendingIcon color="primary" sx={{ fontSize: 40, mb: 1 }} />
-            <Typography variant="h6">Live Analysis</Typography>
-            <Typography variant="body2" color="text.secondary">
-              Analyze new comments
-            </Typography>
-          </Card>
-        </Box>
-      </Paper>
-    </Box>
   );
 };
 

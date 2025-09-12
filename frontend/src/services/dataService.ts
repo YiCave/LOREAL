@@ -137,11 +137,187 @@ export const topicDistribution: TopicData[] = [
       { keyword: "shade", probability: 0.08 }
     ]
   },
-  // Add more topics...
-  { topic_id: 1, name: "Beauty Compliments", videos: 832, percentage: 2.4, coherence_score: 0.412, keywords: ["beautiful", "you", "so", "are", "gorgeous"], top_keywords: [{ keyword: "beautiful", probability: 0.18 }, { keyword: "you", probability: 0.16 }, { keyword: "so", probability: 0.14 }] },
-  { topic_id: 15, name: "Product Recommendations", videos: 1666, percentage: 4.8, coherence_score: 0.467, keywords: ["product", "recommend", "use", "good", "best"], top_keywords: [{ keyword: "product", probability: 0.15 }, { keyword: "recommend", probability: 0.12 }] },
-  { topic_id: 18, name: "Hair Styling Tips", videos: 1195, percentage: 3.4, coherence_score: 0.434, keywords: ["hair", "curl", "straight", "style", "tips"], top_keywords: [{ keyword: "hair", probability: 0.17 }, { keyword: "curl", probability: 0.13 }] },
-  { topic_id: 10, name: "Makeup Application", videos: 1053, percentage: 3.0, coherence_score: 0.489, keywords: ["makeup", "apply", "foundation", "concealer", "brush"], top_keywords: [{ keyword: "makeup", probability: 0.19 }, { keyword: "apply", probability: 0.14 }] }
+  { 
+    topic_id: 15, 
+    name: "Product Recommendations", 
+    videos: 1666, 
+    percentage: 4.8, 
+    coherence_score: 0.467, 
+    keywords: ["product", "recommend", "use", "good", "best"], 
+    top_keywords: [{ keyword: "product", probability: 0.15 }, { keyword: "recommend", probability: 0.12 }, { keyword: "use", probability: 0.10 }] 
+  },
+  { 
+    topic_id: 18, 
+    name: "Hair Styling Tips", 
+    videos: 1195, 
+    percentage: 3.4, 
+    coherence_score: 0.434, 
+    keywords: ["hair", "curl", "straight", "style", "tips"], 
+    top_keywords: [{ keyword: "hair", probability: 0.17 }, { keyword: "curl", probability: 0.13 }, { keyword: "style", probability: 0.11 }] 
+  },
+  { 
+    topic_id: 10, 
+    name: "Makeup Application", 
+    videos: 1053, 
+    percentage: 3.0, 
+    coherence_score: 0.489, 
+    keywords: ["makeup", "apply", "foundation", "concealer", "brush"], 
+    top_keywords: [{ keyword: "makeup", probability: 0.19 }, { keyword: "apply", probability: 0.14 }, { keyword: "foundation", probability: 0.12 }] 
+  },
+  { 
+    topic_id: 1, 
+    name: "Beauty Compliments", 
+    videos: 832, 
+    percentage: 2.4, 
+    coherence_score: 0.412, 
+    keywords: ["beautiful", "you", "so", "are", "gorgeous"], 
+    top_keywords: [{ keyword: "beautiful", probability: 0.18 }, { keyword: "you", probability: 0.16 }, { keyword: "so", probability: 0.14 }] 
+  },
+  // Additional topics (11-26)
+  { 
+    topic_id: 12, 
+    name: "Beauty Trends", 
+    videos: 409, 
+    percentage: 1.2, 
+    coherence_score: 0.262, 
+    keywords: ["trend", "fashion", "new", "style", "latest"], 
+    top_keywords: [{ keyword: "trend", probability: 0.16 }, { keyword: "new", probability: 0.13 }, { keyword: "style", probability: 0.11 }] 
+  },
+  { 
+    topic_id: 17, 
+    name: "Skincare Tips", 
+    videos: 369, 
+    percentage: 1.1, 
+    coherence_score: 0.298, 
+    keywords: ["tip", "skincare", "routine", "care", "healthy"], 
+    top_keywords: [{ keyword: "tip", probability: 0.15 }, { keyword: "skincare", probability: 0.13 }, { keyword: "routine", probability: 0.10 }] 
+  },
+  { 
+    topic_id: 2, 
+    name: "Beauty Products", 
+    videos: 363, 
+    percentage: 1.0, 
+    coherence_score: 0.307, 
+    keywords: ["product", "beauty", "brand", "quality", "effective"], 
+    top_keywords: [{ keyword: "product", probability: 0.17 }, { keyword: "beauty", probability: 0.14 }, { keyword: "brand", probability: 0.11 }] 
+  },
+  { 
+    topic_id: 19, 
+    name: "Natural Beauty", 
+    videos: 350, 
+    percentage: 1.0, 
+    coherence_score: 0.28, 
+    keywords: ["natural", "organic", "clean", "pure", "healthy"], 
+    top_keywords: [{ keyword: "natural", probability: 0.18 }, { keyword: "organic", probability: 0.15 }, { keyword: "clean", probability: 0.12 }] 
+  },
+  { 
+    topic_id: 9, 
+    name: "Beauty Education", 
+    videos: 318, 
+    percentage: 0.9, 
+    coherence_score: 0.482, 
+    keywords: ["learn", "education", "technique", "skill", "tutorial"], 
+    top_keywords: [{ keyword: "learn", probability: 0.16 }, { keyword: "technique", probability: 0.14 }, { keyword: "skill", probability: 0.12 }] 
+  },
+  { 
+    topic_id: 7, 
+    name: "Beauty Tools", 
+    videos: 299, 
+    percentage: 0.9, 
+    coherence_score: 0.534, 
+    keywords: ["tool", "brush", "sponge", "blender", "accessory"], 
+    top_keywords: [{ keyword: "tool", probability: 0.17 }, { keyword: "brush", probability: 0.15 }, { keyword: "sponge", probability: 0.13 }] 
+  },
+  { 
+    topic_id: 4, 
+    name: "Beauty Inspiration", 
+    videos: 247, 
+    percentage: 0.7, 
+    coherence_score: 0.485, 
+    keywords: ["inspiration", "creative", "artistic", "design", "unique"], 
+    top_keywords: [{ keyword: "inspiration", probability: 0.18 }, { keyword: "creative", probability: 0.15 }, { keyword: "artistic", probability: 0.13 }] 
+  },
+  { 
+    topic_id: 11, 
+    name: "Beauty Lifestyle", 
+    videos: 181, 
+    percentage: 0.5, 
+    coherence_score: 0.437, 
+    keywords: ["lifestyle", "daily", "routine", "wellness", "balance"], 
+    top_keywords: [{ keyword: "lifestyle", probability: 0.17 }, { keyword: "daily", probability: 0.14 }, { keyword: "routine", probability: 0.12 }] 
+  },
+  { 
+    topic_id: 8, 
+    name: "Beauty Community", 
+    videos: 166, 
+    percentage: 0.5, 
+    coherence_score: 0.283, 
+    keywords: ["community", "share", "connect", "support", "together"], 
+    top_keywords: [{ keyword: "community", probability: 0.16 }, { keyword: "share", probability: 0.14 }, { keyword: "connect", probability: 0.12 }] 
+  },
+  { 
+    topic_id: 0, 
+    name: "Beauty Discussion", 
+    videos: 109, 
+    percentage: 0.3, 
+    coherence_score: 0.375, 
+    keywords: ["discussion", "talk", "opinion", "thought", "experience"], 
+    top_keywords: [{ keyword: "discussion", probability: 0.17 }, { keyword: "talk", probability: 0.14 }, { keyword: "opinion", probability: 0.12 }] 
+  },
+  { 
+    topic_id: 24, 
+    name: "Beauty Innovation", 
+    videos: 85, 
+    percentage: 0.2, 
+    coherence_score: 0.245, 
+    keywords: ["innovation", "technology", "advanced", "future", "breakthrough"], 
+    top_keywords: [{ keyword: "innovation", probability: 0.18 }, { keyword: "technology", probability: 0.15 }, { keyword: "advanced", probability: 0.13 }] 
+  },
+  { 
+    topic_id: 22, 
+    name: "Beauty Wellness", 
+    videos: 75, 
+    percentage: 0.2, 
+    coherence_score: 0.286, 
+    keywords: ["wellness", "health", "mindfulness", "self-care", "balance"], 
+    top_keywords: [{ keyword: "wellness", probability: 0.17 }, { keyword: "health", probability: 0.15 }, { keyword: "mindfulness", probability: 0.13 }] 
+  },
+  { 
+    topic_id: 16, 
+    name: "Beauty Science", 
+    videos: 74, 
+    percentage: 0.2, 
+    coherence_score: 0.24, 
+    keywords: ["science", "research", "formula", "ingredient", "study"], 
+    top_keywords: [{ keyword: "science", probability: 0.16 }, { keyword: "research", probability: 0.14 }, { keyword: "formula", probability: 0.12 }] 
+  },
+  { 
+    topic_id: 13, 
+    name: "Beauty Culture", 
+    videos: 44, 
+    percentage: 0.1, 
+    coherence_score: 0.346, 
+    keywords: ["culture", "tradition", "heritage", "custom", "history"], 
+    top_keywords: [{ keyword: "culture", probability: 0.17 }, { keyword: "tradition", probability: 0.15 }, { keyword: "heritage", probability: 0.13 }] 
+  },
+  { 
+    topic_id: 25, 
+    name: "Beauty Events", 
+    videos: 39, 
+    percentage: 0.1, 
+    coherence_score: 0.36, 
+    keywords: ["event", "show", "award", "celebration", "festival"], 
+    top_keywords: [{ keyword: "event", probability: 0.16 }, { keyword: "show", probability: 0.14 }, { keyword: "award", probability: 0.12 }] 
+  },
+  { 
+    topic_id: 23, 
+    name: "Beauty Media", 
+    videos: 1, 
+    percentage: 0.0, 
+    coherence_score: 0.316, 
+    keywords: ["media", "content", "digital", "online", "platform"], 
+    top_keywords: [{ keyword: "media", probability: 0.18 }, { keyword: "content", probability: 0.15 }, { keyword: "digital", probability: 0.13 }] 
+  }
 ];
 
 // Coherence scores for K optimization visualization

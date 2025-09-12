@@ -15,10 +15,7 @@ import {
 } from './services/dataService';
 import { 
   Box, 
-  AppBar, 
-  Toolbar, 
   Typography, 
-  IconButton,
   Drawer,
   List,
   ListItem,
@@ -27,26 +24,18 @@ import {
   ListItemText,
   Chip,
   Avatar,
-  Switch,
-  FormControlLabel
 } from '@mui/material';
 import {
-  Menu as MenuIcon,
   Dashboard as DashboardIcon,
   Topic as TopicIcon,
   Comment as CommentIcon,
   Analytics as AnalyticsIcon,
-  Security as SecurityIcon,
-  Brightness4 as DarkModeIcon,
-  Brightness7 as LightModeIcon,
 } from '@mui/icons-material';
 
 const queryClient = new QueryClient();
 
 const App: React.FC = () => {
-  const [mobileOpen, setMobileOpen] = useState(false);
   const [selectedView, setSelectedView] = useState('dashboard');
-  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const drawerWidth = 280;
 
@@ -75,29 +64,69 @@ const App: React.FC = () => {
       icon: <AnalyticsIcon />, 
       description: 'Coherence Scores' 
     },
-    { 
-      id: 'quality3d', 
-      label: '🎯 Quality Distribution', 
-      icon: <SecurityIcon />, 
-      description: '3D Visualization' 
-    },
   ];
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
 
   const renderContent = () => {
     switch (selectedView) {
       case 'dashboard':
-        return <Dashboard />;
+        return (
+          <Box sx={{ p: 3 }}>
+            <Typography 
+              variant="h2" 
+              gutterBottom 
+              sx={{ 
+                fontFamily: 'Orbitron, Inter, Roboto, Arial, sans-serif',
+                fontWeight: 900,
+                fontSize: '4rem',
+                mb: 4
+              }}
+            >
+              <span style={{ color: 'white' }}>Comprehensive </span>
+              <span style={{
+                background: 'linear-gradient(45deg, #00E5FF 0%, #00FF88 25%, #FF4DFF 50%, #FF3D5A 75%, #00E5FF 100%)',
+                backgroundSize: '300% 300%',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                animation: 'gradientShift 3s ease-in-out infinite'
+              }}>Dashboard</span>
+            </Typography>
+            <Dashboard />
+          </Box>
+        );
       case 'topics':
         return (
           <Box sx={{ p: 3 }}>
-            <Typography variant="h4" gutterBottom fontWeight="700" color="primary">
-              🏆 Beauty Topics Leaderboard
+            <Typography 
+              variant="h2" 
+              gutterBottom 
+              sx={{ 
+                fontFamily: 'Orbitron, Inter, Roboto, Arial, sans-serif',
+                fontWeight: 900,
+                fontSize: '4rem',
+                mb: 4
+              }}
+            >
+              <span style={{ color: 'white' }}>Topic </span>
+              <span style={{
+                background: 'linear-gradient(45deg, #00E5FF 0%, #00FF88 25%, #FF4DFF 50%, #FF3D5A 75%, #00E5FF 100%)',
+                backgroundSize: '300% 300%',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                animation: 'gradientShift 3s ease-in-out infinite'
+              }}>Leaderboard</span>
             </Typography>
-            <Typography variant="body1" color="text.secondary" paragraph>
+            <Typography variant="body1" sx={{ 
+              color: 'rgba(255,255,255,0.8)',
+              mb: 3,
+              fontSize: '1.1rem',
+              lineHeight: 1.6,
+              background: 'rgba(0,229,255,0.05)',
+              p: 2,
+              borderRadius: 3,
+              border: '1px solid rgba(0,229,255,0.2)',
+              backdropFilter: 'blur(10px)'
+            }}>
               Explore the 26 topics discovered from {topVideosByComments.reduce((sum, v) => sum + v.commentCount, 0).toLocaleString()} comments 
               across {topVideosByComments.length.toLocaleString()} beauty videos.
             </Typography>
@@ -107,31 +136,51 @@ const App: React.FC = () => {
       case 'comments':
         return (
           <Box sx={{ p: 3 }}>
-            <Typography variant="h4" gutterBottom fontWeight="700" color="primary">
-              💬 Comment Classification Analysis
+            <Typography 
+              variant="h2" 
+              gutterBottom 
+              sx={{ 
+                fontFamily: 'Orbitron, Inter, Roboto, Arial, sans-serif',
+                fontWeight: 900,
+                fontSize: '4rem',
+                mb: 4
+              }}
+            >
+              <span style={{ color: 'white' }}>Comment </span>
+              <span style={{
+                background: 'linear-gradient(45deg, #00E5FF 0%, #00FF88 25%, #FF4DFF 50%, #FF3D5A 75%, #00E5FF 100%)',
+                backgroundSize: '300% 300%',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                animation: 'gradientShift 3s ease-in-out infinite'
+              }}>Analysis</span>
             </Typography>
-            <Typography variant="body1" color="text.secondary" paragraph>
-              Our AI-powered system automatically identifies spam, quality, and uncertain comments using 
-              advanced Gaussian Mixture Model clustering.
+            <Typography variant="body1" sx={{ 
+              color: 'rgba(255,255,255,0.8)',
+              mb: 3,
+              fontSize: '1.1rem',
+              lineHeight: 1.6,
+              background: 'rgba(0,229,255,0.05)',
+              p: 2,
+              borderRadius: 3,
+              border: '1px solid rgba(0,229,255,0.2)',
+              backdropFilter: 'blur(10px)'
+            }}>
+              Our AI-powered system automatically identifies spam and quality comments using 
+              advanced Gaussian Mixture Model clustering with confidence-based filtering.
             </Typography>
-            <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: 3 }}>
+            <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(600px, 1fr))', gap: 3 }}>
               <CommentViewer 
                 comments={spamSamples} 
-                title="🚫 Spam Comments" 
+                title="Spam Comments" 
                 type="spam"
                 helpContent="Learn how we detect spam"
               />
               <CommentViewer 
                 comments={qualityCommentSamples} 
-                title="✅ Quality Comments" 
+                title="Quality Comments" 
                 type="quality"
                 helpContent="See what makes quality comments"
-              />
-              <CommentViewer 
-                comments={spamSamples.slice(0, 2)} 
-                title="❓ Uncertain Comments" 
-                type="uncertain"
-                helpContent="Comments that need manual review"
               />
             </Box>
           </Box>
@@ -139,10 +188,36 @@ const App: React.FC = () => {
       case 'coherence':
         return (
           <Box sx={{ p: 3 }}>
-            <Typography variant="h4" gutterBottom fontWeight="700" color="primary">
-              📈 Topic Model Performance
+            <Typography 
+              variant="h2" 
+              gutterBottom 
+              sx={{ 
+                fontFamily: 'Orbitron, Inter, Roboto, Arial, sans-serif',
+                fontWeight: 900,
+                fontSize: '4rem',
+                mb: 4
+              }}
+            >
+              <span style={{ color: 'white' }}>Model </span>
+              <span style={{
+                background: 'linear-gradient(45deg, #00E5FF 0%, #00FF88 25%, #FF4DFF 50%, #FF3D5A 75%, #00E5FF 100%)',
+                backgroundSize: '300% 300%',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                animation: 'gradientShift 3s ease-in-out infinite'
+              }}>Performance</span>
             </Typography>
-            <Typography variant="body1" color="text.secondary" paragraph>
+            <Typography variant="body1" sx={{ 
+              color: 'rgba(255,255,255,0.8)',
+              mb: 3,
+              fontSize: '1.1rem',
+              lineHeight: 1.6,
+              background: 'rgba(0,229,255,0.05)',
+              p: 2,
+              borderRadius: 3,
+              border: '1px solid rgba(0,229,255,0.2)',
+              backdropFilter: 'blur(10px)'
+            }}>
               Coherence score optimization showing why we chose 26 topics as the optimal configuration 
               for our L'Oréal beauty content analysis.
             </Typography>
@@ -172,26 +247,50 @@ const App: React.FC = () => {
   };
 
   const drawer = (
-    <Box sx={{ height: '100%', backgroundColor: '#1E1E1E', display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ 
+      height: '100%', 
+      background: 'linear-gradient(180deg, #0a0f1f 0%, #1a1f2e 50%, #091324 100%)',
+      display: 'flex', 
+      flexDirection: 'column',
+      boxShadow: '0 0 40px rgba(0,229,255,0.1)',
+      borderRight: '1px solid rgba(0,229,255,0.2)'
+    }}>
       {/* Logo Section */}
-      <Box sx={{ p: 3, borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
+      <Box sx={{ 
+        p: 3, 
+        borderBottom: '1px solid rgba(0,229,255,0.2)',
+        background: 'rgba(0,229,255,0.05)',
+        backdropFilter: 'blur(10px)'
+      }}>
         <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
           <Avatar
             sx={{ 
-              backgroundColor: 'primary.main', 
-              width: 40, 
-              height: 40, 
+              background: 'linear-gradient(45deg, #00E5FF, #00FF88)',
+              width: 48, 
+              height: 48, 
               mr: 2,
-              fontWeight: 700 
+              fontWeight: 700,
+              fontSize: '1.2rem',
+              boxShadow: '0 0 20px rgba(0,229,255,0.4)',
+              border: '2px solid rgba(0,229,255,0.3)'
             }}
           >
             L
           </Avatar>
           <Box>
-            <Typography variant="h6" fontWeight="700" color="primary">
+            <Typography variant="h6" fontWeight="700" sx={{
+              background: 'linear-gradient(90deg, #00E5FF, #00FF88)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              fontSize: '1.1rem'
+            }}>
               L'Oréal AI
             </Typography>
-            <Typography variant="caption" color="text.secondary">
+            <Typography variant="caption" sx={{ 
+              color: 'rgba(0,229,255,0.7)',
+              fontSize: '0.75rem',
+              fontWeight: 500
+            }}>
               Comment Analytics
             </Typography>
           </Box>
@@ -200,13 +299,24 @@ const App: React.FC = () => {
           <Chip 
             label="93.2% Accuracy" 
             size="small" 
-            color="primary" 
-            variant="outlined"
+            sx={{ 
+              background: 'rgba(0,229,255,0.1)',
+              color: '#00E5FF',
+              border: '1px solid rgba(0,229,255,0.3)',
+              fontWeight: 600,
+              fontSize: '0.7rem'
+            }}
           />
           <Chip 
             label="26 Topics" 
             size="small" 
-            sx={{ backgroundColor: 'rgba(67, 160, 71, 0.2)', color: '#43A047' }}
+            sx={{ 
+              background: 'rgba(0,255,136,0.1)',
+              color: '#00FF88',
+              border: '1px solid rgba(0,255,136,0.3)',
+              fontWeight: 600,
+              fontSize: '0.7rem'
+            }}
           />
         </Box>
       </Box>
@@ -219,32 +329,76 @@ const App: React.FC = () => {
               selected={selectedView === item.id}
               onClick={() => {
                 setSelectedView(item.id);
-                setMobileOpen(false);
               }}
               sx={{
-                borderRadius: 2,
+                borderRadius: 3,
                 mx: 1,
+                py: 1.5,
+                px: 2,
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                position: 'relative',
+                overflow: 'hidden',
                 '&.Mui-selected': {
-                  backgroundColor: 'rgba(255, 105, 0, 0.15)',
-                  color: 'primary.main',
+                  background: 'linear-gradient(135deg, rgba(0,229,255,0.15) 0%, rgba(0,255,136,0.1) 100%)',
+                  border: '1px solid rgba(0,229,255,0.3)',
+                  boxShadow: '0 0 20px rgba(0,229,255,0.2)',
+                  '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    background: 'linear-gradient(135deg, rgba(0,229,255,0.1) 0%, rgba(0,255,136,0.05) 100%)',
+                    zIndex: -1,
+                  },
                   '&:hover': {
-                    backgroundColor: 'rgba(255, 105, 0, 0.2)',
+                    transform: 'translateY(-2px)',
+                    boxShadow: '0 8px 30px rgba(0,229,255,0.3)',
+                    border: '1px solid rgba(0,229,255,0.5)',
                   },
                 },
                 '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                  background: 'rgba(0,229,255,0.08)',
+                  border: '1px solid rgba(0,229,255,0.2)',
+                  transform: 'translateY(-2px)',
+                  boxShadow: '0 4px 20px rgba(0,229,255,0.15)',
+                  '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    background: 'linear-gradient(135deg, rgba(0,229,255,0.05) 0%, rgba(0,255,136,0.02) 100%)',
+                    zIndex: -1,
+                  },
                 },
               }}
             >
-              <ListItemIcon sx={{ color: selectedView === item.id ? 'primary.main' : 'text.secondary' }}>
+              <ListItemIcon sx={{ 
+                color: selectedView === item.id ? '#00E5FF' : 'rgba(0,229,255,0.6)',
+                minWidth: 40,
+                '& svg': {
+                  fontSize: '1.3rem',
+                  filter: selectedView === item.id ? 'drop-shadow(0 0 8px rgba(0,229,255,0.6))' : 'none',
+                  transition: 'all 0.3s ease'
+                }
+              }}>
                 {item.icon}
               </ListItemIcon>
               <ListItemText
                 primary={item.label}
                 secondary={item.description}
+                primaryTypographyProps={{
+                  fontSize: '0.9rem',
+                  fontWeight: selectedView === item.id ? 600 : 500,
+                  color: selectedView === item.id ? '#00E5FF' : 'rgba(255,255,255,0.8)'
+                }}
                 secondaryTypographyProps={{
-                  fontSize: '0.75rem',
-                  color: 'text.disabled'
+                  fontSize: '0.7rem',
+                  color: selectedView === item.id ? 'rgba(0,229,255,0.7)' : 'rgba(255,255,255,0.5)',
+                  fontWeight: 400
                 }}
               />
             </ListItemButton>
@@ -252,26 +406,6 @@ const App: React.FC = () => {
         ))}
       </List>
 
-      {/* Theme Toggle */}
-      <Box sx={{ p: 2, borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={isDarkMode}
-              onChange={(e) => setIsDarkMode(e.target.checked)}
-              color="primary"
-            />
-          }
-          label={
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              {isDarkMode ? <DarkModeIcon sx={{ mr: 1, fontSize: 20 }} /> : <LightModeIcon sx={{ mr: 1, fontSize: 20 }} />}
-              <Typography variant="body2">
-                {isDarkMode ? 'Dark Mode' : 'Light Mode'}
-              </Typography>
-            </Box>
-          }
-        />
-      </Box>
     </Box>
   );
 
@@ -279,67 +413,19 @@ const App: React.FC = () => {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-        <Box sx={{ display: 'flex', minHeight: '100vh' }}>
-          {/* App Bar */}
-          <AppBar
-            position="fixed"
-            sx={{
-              width: { sm: `calc(100% - ${drawerWidth}px)` },
-              ml: { sm: `${drawerWidth}px` },
-              backgroundColor: '#1E1E1E',
-              borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-              boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.3)',
-            }}
-          >
-            <Toolbar>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                onClick={handleDrawerToggle}
-                sx={{ mr: 2, display: { sm: 'none' } }}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-                {menuItems.find(item => item.id === selectedView)?.label || 'L\'Oréal AI Dashboard'}
-              </Typography>
-              <Chip 
-                label="🔴 Live Analysis" 
-                size="small" 
-                sx={{ 
-                  backgroundColor: 'rgba(244, 67, 54, 0.2)', 
-                  color: '#F44336',
-                  animation: 'pulse 2s infinite'
-                }} 
-              />
-            </Toolbar>
-          </AppBar>
+        <Box sx={{
+          display: 'flex',
+          minHeight: '100vh',
+          background: 'linear-gradient(180deg, #0a0f1f 0%, #091324 100%)',
+          position: 'relative',
+          overflow: 'hidden',
+        }}>
 
           {/* Drawer */}
           <Box
             component="nav"
             sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
           >
-            <Drawer
-              variant="temporary"
-              open={mobileOpen}
-              onClose={handleDrawerToggle}
-              ModalProps={{
-                keepMounted: true,
-              }}
-              sx={{
-                display: { xs: 'block', sm: 'none' },
-                '& .MuiDrawer-paper': { 
-                  boxSizing: 'border-box', 
-                  width: drawerWidth,
-                  backgroundColor: '#1E1E1E',
-                  borderRight: '1px solid rgba(255, 255, 255, 0.1)'
-                },
-              }}
-            >
-              {drawer}
-            </Drawer>
             <Drawer
               variant="permanent"
               sx={{
@@ -367,7 +453,6 @@ const App: React.FC = () => {
               backgroundColor: '#121212',
             }}
           >
-            <Toolbar />
             {renderContent()}
           </Box>
         </Box>
@@ -380,6 +465,16 @@ const App: React.FC = () => {
               50% { opacity: 0.7; }
               100% { opacity: 1; }
             }
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      
+      @keyframes shimmer {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+      }
           `}
         </style>
       </ThemeProvider>
