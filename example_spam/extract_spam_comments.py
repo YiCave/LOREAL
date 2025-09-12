@@ -12,8 +12,8 @@ import os
 def extract_spam_comments():
     """Extract 100 spam comments from the complete dataset"""
     
-    # File paths
-    input_file = 'complete_comments_with_features.csv'
+    # File paths - Updated to use correct filename
+    input_file = '../complete_comments_top20_features.csv'  # Path to your processed file
     output_file = 'spam_comments_sample_100.csv'
     
     print("🔍 Extracting 100 spam comments...")
@@ -99,10 +99,10 @@ if __name__ == "__main__":
     print("=" * 50)
     
     # Check if input file exists
-    input_file = 'complete_comments_with_features.csv'
+    input_file = '../complete_comments_top20_features.csv'  # Updated path
     if not os.path.exists(input_file):
-        print(f"❌ Input file '{input_file}' not found in current directory!")
-        print("Please make sure the file exists and try again.")
+        print(f"❌ Input file '{input_file}' not found!")
+        print("Please make sure the complete_comments_top20_features.csv file exists in the parent directory.")
     else:
         extract_spam_comments()
     
