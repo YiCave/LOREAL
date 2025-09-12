@@ -5,6 +5,11 @@ video_topics_simple.csv
 # Data files (CSV)
 *.csv
 
+# Model files and directories
+model/
+model_simple/
+*.pkl
+
 # Jupyter notebook checkpoints
 .ipynb_checkpoints/
 
