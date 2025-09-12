@@ -1,0 +1,14 @@
+complete_comments_top20_features.csv
+comment_topics_simple.csv
+video_topics_simple.csv
+
+# Data files (CSV)
+*.csv
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
