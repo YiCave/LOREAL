@@ -6,25 +6,16 @@ import {
   Card,
   CardContent,
   LinearProgress,
-  Chip,
   Table,
   TableBody,
   TableCell,
   TableContainer,
   TableHead,
   TableRow,
-  Avatar,
-  Divider
 } from '@mui/material';
 import {
-  VideoLibrary as VideoIcon,
-  Comment as CommentIcon,
-  Security as SecurityIcon,
-  TrendingUp as TrendingIcon,
-  ThumbUp as LikeIcon,
   Warning as WarningIcon,
   Analytics as AnalyticsIcon,
-  Topic as TopicIcon
 } from '@mui/icons-material';
 import {
   BarChart,
@@ -36,13 +27,9 @@ import {
   PieChart,
   Pie,
   Cell,
-  LineChart,
-  Line,
   ResponsiveContainer,
   Area,
   AreaChart,
-  ScatterChart,
-  Scatter
 } from 'recharts';
 
 // Import real data from our analysis
@@ -51,8 +38,7 @@ import {
   qualityMetrics, 
   engagementTrends, 
   spamSamples,
-  topVideosByComments,
-  getTopicName 
+  topVideosByComments
 } from '../../services/dataService';
 
 // Transform real data for charts
@@ -68,7 +54,6 @@ const qualityChartData = [
   { name: 'Uncertain', value: qualityMetrics.uncertain_comments, color: '#FFD600' }
 ];
 
-const COLORS = ['#FF6900', '#00C7BE', '#8E24AA', '#43A047', '#1E88E5', '#FB8C00'];
 
 const Dashboard: React.FC = () => {
   const StatCard = ({ title, value, subtitle, color, progress }: any) => (

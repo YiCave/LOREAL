@@ -24,7 +24,6 @@ import {
   ListItemIcon,
   ListItemText,
   Chip,
-  Avatar,
 } from '@mui/material';
 import {
   Dashboard as DashboardIcon,

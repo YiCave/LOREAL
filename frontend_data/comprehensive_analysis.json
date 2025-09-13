@@ -616,7 +616,7 @@
       ],
       "5": [
         {
-          "keyword": NaN,
+          "keyword": "unknown",
           "probability": 0.26659685,
           "frequency": 19804
         },
@@ -2446,35 +2446,35 @@
       {
         "videoId": 31248,
         "video_title": "The Art of VIDEO EDITING: Balancing Artistic Vision and Technical Precision",
-        "comment_ratio": Infinity,
+        "comment_ratio": 999999,
         "viewCount": 0.0,
         "num_comments": 1
       },
       {
         "videoId": 51127,
         "video_title": "The Art of VIDEO EDITING: Balancing Artistic Vision and Technical Precision",
-        "comment_ratio": Infinity,
+        "comment_ratio": 999999,
         "viewCount": 0.0,
         "num_comments": 1
       },
       {
         "videoId": 56090,
         "video_title": "The Key to Skin Barrier Repair: Restoring and Strengthening Your Skin&#39;s Defense",
-        "comment_ratio": Infinity,
+        "comment_ratio": 999999,
         "viewCount": 0.0,
         "num_comments": 1
       },
       {
         "videoId": 86177,
         "video_title": "Full Face NOTHING OVER $10 AFFORDABLE Makeup Tutorial #Shorts",
-        "comment_ratio": Infinity,
+        "comment_ratio": 999999,
         "viewCount": 0.0,
         "num_comments": 1
       },
       {
         "videoId": 90696,
         "video_title": "makeup makeup. law of attraction. face mask",
-        "comment_ratio": Infinity,
+        "comment_ratio": 999999,
         "viewCount": 0.0,
         "num_comments": 1
       },
@@ -2482,35 +2482,35 @@
         "videoId": 46225,
         "video_title": "Real #cute #skincare",
         "comment_ratio": 12460.0,
-        "viewCount": NaN,
+        "viewCount": 0,
         "num_comments": 12460
       },
       {
         "videoId": 75208,
         "video_title": "It’s not just a hair change — it’s a life change!😭😭😭cr:@krewkutz_ #blackwoman #hairstylist #shorts",
         "comment_ratio": 5232.0,
-        "viewCount": NaN,
+        "viewCount": 0,
         "num_comments": 5232
       },
       {
         "videoId": 43383,
         "video_title": "power of makeup💄#douyin #song #makeup #makeuptutorial #transition#kpop#trending#makeuptransformation",
         "comment_ratio": 1444.0,
-        "viewCount": NaN,
+        "viewCount": 0,
         "num_comments": 1444
       },
       {
         "videoId": 15013,
         "video_title": "I CANT BE THE ONLY ONE. #preppysummer #preppy #preppyoreo #fypage #skincare",
         "comment_ratio": 1170.0,
-        "viewCount": NaN,
+        "viewCount": 0,
         "num_comments": 1170
       },
       {
         "videoId": 70643,
         "video_title": "power of makeup💄 #douyin #song #makeuptutorial#transition#makeup#trending#makeuptransformation#memes",
         "comment_ratio": 833.0,
-        "viewCount": NaN,
+        "viewCount": 0,
         "num_comments": 833
       }
     ],

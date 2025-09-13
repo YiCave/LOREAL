@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 import {
   Box,
-  Card,
-  CardContent,
   Typography,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemAvatar,
-  Avatar,
   Chip,
   LinearProgress,
   Dialog,
@@ -16,8 +9,6 @@ import {
   DialogContent,
   Fade,
   IconButton,
-  Badge,
-  Tooltip,
   Button,
 } from '@mui/material';
 import {

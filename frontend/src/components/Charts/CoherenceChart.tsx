@@ -4,11 +4,9 @@ import {
   Card,
   CardContent,
   Typography,
-  Tooltip,
   Chip,
 } from '@mui/material';
 import {
-  LineChart,
   Line,
   XAxis,
   YAxis,
@@ -18,7 +16,6 @@ import {
   ReferenceLine,
   Area,
   ComposedChart,
-  Scatter,
 } from 'recharts';
 import { coherenceScores } from '../../services/dataService';
 

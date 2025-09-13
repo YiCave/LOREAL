@@ -3,7 +3,6 @@ import {
   Box,
   Typography,
   Chip,
-  LinearProgress,
   Fade,
 } from '@mui/material';
 import {
@@ -11,7 +10,7 @@ import {
   CheckCircle as QualityIcon,
   PlayCircleOutline as PlayIcon,
 } from '@mui/icons-material';
-import { SpamComment, QualityComment, qualityMetrics } from '../../services/dataService';
+import { SpamComment, QualityComment } from '../../services/dataService';
 
 interface CommentViewerProps {
   comments: (SpamComment | QualityComment)[];
@@ -143,8 +142,6 @@ const CommentViewer: React.FC<CommentViewerProps> = ({
       }}>
         {displayComments.map((comment, index) => {
             const isSpam = 'classification_confidence' in comment;
-            const confidence = isSpam ? comment.classification_confidence : 1.0;
-            const likeCount = isSpam ? 0 : (comment as QualityComment).likeCount;
             const isTopComment = index < 3; // Top 3 comments get special styling
             
             return (
