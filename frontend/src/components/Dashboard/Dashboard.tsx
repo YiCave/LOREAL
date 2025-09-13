@@ -51,7 +51,7 @@ import {
   qualityMetrics, 
   engagementTrends, 
   spamSamples,
-  sampleVideoAnalyses,
+  topVideosByComments,
   getTopicName 
 } from '../../services/dataService';
 
@@ -516,25 +516,17 @@ const Dashboard: React.FC = () => {
               <TableHead>
                 <TableRow>
                   <TableCell>Video</TableCell>
-                  <TableCell>Topic</TableCell>
                   <TableCell align="right">Views</TableCell>
                   <TableCell align="right">Comments</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
-                {sampleVideoAnalyses.map((video) => (
+                {topVideosByComments.slice(0, 5).map((video) => (
                   <TableRow key={video.videoId}>
                     <TableCell>
-                      <Typography variant="body2" noWrap sx={{ maxWidth: 200 }}>
-                        {video.title.substring(0, 50)}...
+                      <Typography variant="body2" noWrap sx={{ maxWidth: 300 }}>
+                        {video.title.substring(0, 60)}...
                       </Typography>
-                    </TableCell>
-                    <TableCell>
-                      <Chip 
-                        label={getTopicName(video.topTopics[0])} 
-                        size="small" 
-                        variant="outlined"
-                      />
                     </TableCell>
                     <TableCell align="right">
                       {(video.viewCount / 1000000).toFixed(1)}M

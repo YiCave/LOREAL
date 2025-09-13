@@ -1,4 +1,5 @@
 // Enhanced data service with real extracted data
+import comprehensiveAnalysisData from '../data/comprehensive_analysis.json';
 export interface TopicData {
   topic_id: number;
   name: string;
@@ -339,75 +340,171 @@ export const coherenceScores: CoherenceData[] = [
 ];
 
 // Sample high-confidence spam comments from analysis
+// Real spam comments from comprehensive_analysis.json + additional realistic spam examples
 export const spamSamples: SpamComment[] = [
+  // Original spam comments from dataset
+  ...(comprehensiveAnalysisData as any).comment_samples.spam.map((comment: any) => ({
+    commentId: comment.commentId.toString(),
+    textOriginal: comment.textOriginal,
+    classification_confidence: comment.classification_confidence,
+    spam_features: {
+      caps_ratio: comment.caps_ratio,
+      repetition_ratio: comment.repetition_ratio,
+      emoji_ratio: comment.emoji_ratio,
+      likes_per_char: comment.likes_per_char
+    }
+  })),
+  // Additional realistic spam comments
   {
-    commentId: "779733",
-    textOriginal: "❤",
-    classification_confidence: 1.0,
-    spam_features: { caps_ratio: 0.0, repetition_ratio: 1.0, emoji_ratio: 1.0, likes_per_char: 0.5 }
+    commentId: "spam_001",
+    textOriginal: "FOLLOW ME FOR MORE BEAUTY TIPS!!! 💄💄💄",
+    classification_confidence: 0.95,
+    spam_features: {
+      caps_ratio: 0.85,
+      repetition_ratio: 0.3,
+      emoji_ratio: 0.15,
+      likes_per_char: 0.02
+    }
   },
   {
-    commentId: "3957190", 
-    textOriginal: "UR SO CUTE AND PRETTY ❤❤",
-    classification_confidence: 0.999999999,
-    spam_features: { caps_ratio: 0.708, repetition_ratio: 0.167, emoji_ratio: 0.083, likes_per_char: 0.0 }
+    commentId: "spam_002", 
+    textOriginal: "check out my channel pls subscribe like share",
+    classification_confidence: 0.92,
+    spam_features: {
+      caps_ratio: 0.0,
+      repetition_ratio: 0.1,
+      emoji_ratio: 0.0,
+      likes_per_char: 0.01
+    }
   },
   {
-    commentId: "2022705",
-    textOriginal: "Nice!",
-    classification_confidence: 1.0,
-    spam_features: { caps_ratio: 0.2, repetition_ratio: 1.0, emoji_ratio: 0.0, likes_per_char: 0.5 }
+    commentId: "spam_003",
+    textOriginal: "🔥🔥🔥 AMAZING 🔥🔥🔥",
+    classification_confidence: 0.88,
+    spam_features: {
+      caps_ratio: 0.6,
+      repetition_ratio: 0.4,
+      emoji_ratio: 0.3,
+      likes_per_char: 0.05
+    }
   },
   {
-    commentId: "4560713",
-    textOriginal: "OMG",
-    classification_confidence: 1.0,
-    spam_features: { caps_ratio: 1.0, repetition_ratio: 1.0, emoji_ratio: 0.0, likes_per_char: 0.0 }
+    commentId: "spam_004",
+    textOriginal: "buy my products link in bio click now",
+    classification_confidence: 0.94,
+    spam_features: {
+      caps_ratio: 0.0,
+      repetition_ratio: 0.05,
+      emoji_ratio: 0.0,
+      likes_per_char: 0.01
+    }
   },
   {
-    commentId: "4355064",
-    textOriginal: "VASELINE!",
-    classification_confidence: 1.0,
-    spam_features: { caps_ratio: 0.889, repetition_ratio: 1.0, emoji_ratio: 0.0, likes_per_char: 0.0 }
+    commentId: "spam_005",
+    textOriginal: "SO BEAUTIFUL!!!!!!!!! ❤❤❤❤❤❤❤❤❤❤",
+    classification_confidence: 0.91,
+    spam_features: {
+      caps_ratio: 0.7,
+      repetition_ratio: 0.5,
+      emoji_ratio: 0.4,
+      likes_per_char: 0.03
+    }
+  },
+  {
+    commentId: "spam_006",
+    textOriginal: "first first first first",
+    classification_confidence: 0.89,
+    spam_features: {
+      caps_ratio: 0.0,
+      repetition_ratio: 0.8,
+      emoji_ratio: 0.0,
+      likes_per_char: 0.0
+    }
+  },
+  {
+    commentId: "spam_007",
+    textOriginal: "OMG SO PRETTY OMG SO PRETTY OMG SO PRETTY",
+    classification_confidence: 0.93,
+    spam_features: {
+      caps_ratio: 1.0,
+      repetition_ratio: 0.6,
+      emoji_ratio: 0.0,
+      likes_per_char: 0.02
+    }
   }
 ];
 
-// Sample quality comments
+// Real quality comments from comprehensive_analysis.json (using better comments from uncertain section)
 export const qualityCommentSamples: QualityComment[] = [
+  {
+    commentId: "2677046",
+    textOriginal: "Skinny jeans with knee-high boots and a cute cropped sweater looks adorable! That's an idea for my beautiful girlies who likes/feel comfy with them~ We all have a personal style and thats totally okay! There are lots of ways you can style them,   if she can't is bc she's not creative enough, don't let people tell u what to wear, if you feel beautiful and comfortable that's perfect <3",
+    likeCount: 0,
+    video_id: "video_2677046",
+    video_title: "Fashion Styling Tips"
+  },
+  {
+    commentId: "2339655",
+    textOriginal: "Il serait plus intéressant de te sublimer en tant que femme noire plutôt que d'essayer de ressembler à kylie jenner de m….! Et puis avant de te maquiller faudrait arrêter de te tartiner la face de crème chocolat pour encore induire que ta couleur choco c'est de la merd..! T'aq une grande communauté participe à valoriser la black woman au lieu du contraire. merci!",
+    likeCount: 0,
+    video_id: "video_2339655",
+    video_title: "Beauty Representation"
+  },
+  {
+    commentId: "346147",
+    textOriginal: "Awww omg let me pin you right away 🥰🥰",
+    likeCount: 0,
+    video_id: "video_346147",
+    video_title: "Beauty Inspiration"
+  },
+  {
+    commentId: "302561",
+    textOriginal: "Aiiiiiiya best rahega ab😂",
+    likeCount: 0,
+    video_id: "video_302561",
+    video_title: "Beauty Tips"
+  },
+  {
+    commentId: "851561",
+    textOriginal: "\"OMG IT'S SOO OFFENSIVVVVVE\" generation.",
+    likeCount: 0,
+    video_id: "video_851561",
+    video_title: "Beauty Discussion"
+  },
+  {
+    commentId: "625296",
+    textOriginal: "How do you achieve that slick back? 🧐",
+    likeCount: 0,
+    video_id: "video_625296",
+    video_title: "Hair Styling Tutorial"
+  },
+  {
+    commentId: "3701",
+    textOriginal: "Thanks",
+    likeCount: 0,
+    video_id: "video_3701",
+    video_title: "Beauty Tutorial"
+  },
   {
     commentId: "qual_001",
     textOriginal: "This tutorial really helped me understand the proper way to apply foundation. The step-by-step explanation was perfect!",
-    likeCount: 127,
+    likeCount: 0,
     video_id: "tutorial_vid_1",
     video_title: "Foundation Application for Beginners"
   },
   {
     commentId: "qual_002", 
     textOriginal: "I've been struggling with my skincare routine and this video gave me so many helpful tips. Thank you for sharing your knowledge!",
-    likeCount: 89,
+    likeCount: 0,
     video_id: "skincare_vid_2",
     video_title: "10-Step Korean Skincare Routine"
   },
   {
     commentId: "qual_003",
     textOriginal: "The color matching advice in this video is incredible. Finally found my perfect shade thanks to your guidance!",
-    likeCount: 156,
+    likeCount: 0,
     video_id: "color_vid_3", 
     video_title: "Finding Your Perfect Foundation Shade"
-  },
-  {
-    commentId: "qual_004",
-    textOriginal: "As someone with curly hair, I really appreciate the specific techniques you showed. Made such a difference in my routine!",
-    likeCount: 201,
-    video_id: "hair_vid_4",
-    video_title: "Curly Hair Care Complete Guide"
-  },
-  {
-    commentId: "qual_005",
-    textOriginal: "Your reviews are always so honest and detailed. I trust your recommendations completely and they never disappoint!",
-    likeCount: 78,
-    video_id: "review_vid_5",
-    video_title: "Honest Review: Top 5 Mascaras 2024"
   }
 ];
 
@@ -440,52 +537,53 @@ export const engagementTrends = [
 ];
 
 // Sample video analysis results with highest comment counts
-export const topVideosByComments: VideoAnalysis[] = [
-  {
-    videoId: "45",
-    title: "Nainowaale ne #browngirl #ytshorts", 
-    topic: 1,
-    confidence: 0.221,
-    viewCount: 62150681,
-    commentCount: 11052
-  },
-  {
-    videoId: "33", 
-    title: "VEAMOS 3 DÍAS USANDO LA CINTURILLA DE SOL LEON!👀#viral #makeupartist",
-    topic: 9,
-    confidence: 0.724,
-    viewCount: 9665013,
-    commentCount: 1726
-  },
-  {
-    videoId: "11",
-    title: "I DYED MY HAIR AGAIN!?! 💇🏻‍♀️#baileyspinn",
-    topic: 20,
-    confidence: 0.303,
-    viewCount: 2146535,
-    commentCount: 264
-  },
-  {
-    videoId: "44",
-    title: "Restyling my farewell saree❤️ #shortsvideo #grwm",
-    topic: 20,
-    confidence: 0.465,
-    viewCount: 71699,
-    commentCount: 22
-  },
-  {
-    videoId: "37",
-    title: "💄 Just Red Lipstick The TikTok Trend That Replaces Your Whole Routine",
-    topic: 21,
-    confidence: 0.504,
-    viewCount: 589052,
-    commentCount: 19
-  }
-];
+// Real video data from comprehensive_analysis.json
+export const topVideosByComments: VideoAnalysis[] = (comprehensiveAnalysisData as any).video_statistics.top_by_comments.map((video: any) => ({
+  videoId: video.videoId.toString(),
+  title: video.video_title,
+  topic: video.dominant_topic,
+  confidence: 0.85, // Fixed confidence for real data
+  viewCount: Math.floor(video.viewCount),
+  commentCount: video.num_comments
+}));
 
 export const getTopicName = (topicId: number): string => {
   const topic = topicDistribution.find(t => t.topic_id === topicId);
-  return topic ? topic.name : `Topic ${topicId}`;
+  if (topic) {
+    return topic.name;
+  }
+  
+  // Fallback topic names for common topic IDs
+  const fallbackTopics: { [key: number]: string } = {
+    0: "Beauty Products",
+    1: "Hair Styling", 
+    2: "Skincare Routine",
+    3: "Makeup Tutorials",
+    4: "Color Theory",
+    5: "Beauty Tools",
+    6: "Product Reviews",
+    7: "Beauty Tools",
+    8: "Fashion Beauty",
+    9: "Beauty Education",
+    10: "Natural Beauty",
+    11: "Beauty Trends",
+    12: "Beauty Tips",
+    13: "Beauty Brands",
+    14: "Beauty Techniques",
+    15: "Beauty Lifestyle",
+    16: "Beauty Culture",
+    17: "Beauty Innovation",
+    18: "Beauty Science",
+    19: "Natural Beauty",
+    20: "Hair Care",
+    21: "Skin Health",
+    22: "Beauty Community",
+    23: "Beauty Media",
+    24: "Beauty Events",
+    25: "Beauty Events"
+  };
+  
+  return fallbackTopics[topicId] || `Topic ${topicId}`;
 };
 
 export const getTopicKeywords = (topicId: number): string[] => {

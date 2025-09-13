@@ -1,0 +1,2602 @@
+{
+  "comment_samples": {
+    "spam": [
+      {
+        "commentId": 779733,
+        "textOriginal": "❤",
+        "classification_confidence": 1.0,
+        "caps_ratio": 0.0,
+        "repetition_ratio": 1.0,
+        "emoji_ratio": 1.0,
+        "likes_per_char": 0.5
+      },
+      {
+        "commentId": 2022705,
+        "textOriginal": "Nice!",
+        "classification_confidence": 1.0,
+        "caps_ratio": 0.2,
+        "repetition_ratio": 1.0,
+        "emoji_ratio": 0.0,
+        "likes_per_char": 0.5
+      },
+      {
+        "commentId": 1826958,
+        "textOriginal": "Nice",
+        "classification_confidence": 1.0,
+        "caps_ratio": 0.25,
+        "repetition_ratio": 1.0,
+        "emoji_ratio": 0.0,
+        "likes_per_char": 0.0
+      },
+      {
+        "commentId": 625296,
+        "textOriginal": "How do you achieve that slick back? 🧐",
+        "classification_confidence": 1.0,
+        "caps_ratio": 0.027027027027027,
+        "repetition_ratio": 0.125,
+        "emoji_ratio": 0.027027027027027,
+        "likes_per_char": 18.0
+      },
+      {
+        "commentId": 3701,
+        "textOriginal": "Thanks",
+        "classification_confidence": 1.0,
+        "caps_ratio": 0.1666666666666666,
+        "repetition_ratio": 1.0,
+        "emoji_ratio": 0.0,
+        "likes_per_char": 0.0
+      }
+    ],
+    "quality": [
+      {
+        "commentId": 579871,
+        "textOriginal": "❤❤❤❤❤❤❤❤❤❤",
+        "classification_confidence": 0.9999999999999982,
+        "caps_ratio": 0.0,
+        "repetition_ratio": 1.0,
+        "emoji_ratio": 1.0,
+        "likes_per_char": 0.0
+      },
+      {
+        "commentId": 2952480,
+        "textOriginal": "🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣",
+        "classification_confidence": 0.9999999999999982,
+        "caps_ratio": 0.0,
+        "repetition_ratio": 1.0,
+        "emoji_ratio": 1.0,
+        "likes_per_char": 0.0
+      },
+      {
+        "commentId": 4124879,
+        "textOriginal": "❤❤❤❤❤❤❤❤❤",
+        "classification_confidence": 0.9999999999999982,
+        "caps_ratio": 0.0,
+        "repetition_ratio": 1.0,
+        "emoji_ratio": 1.0,
+        "likes_per_char": 0.0
+      },
+      {
+        "commentId": 3825691,
+        "textOriginal": "💜💜💜💜💜💜💜💜💜💜💜",
+        "classification_confidence": 0.9999999999999982,
+        "caps_ratio": 0.0,
+        "repetition_ratio": 1.0,
+        "emoji_ratio": 1.0,
+        "likes_per_char": 0.0
+      },
+      {
+        "commentId": 3891629,
+        "textOriginal": "🎉🎉😂🎉😅🎉❤",
+        "classification_confidence": 0.9999999999999982,
+        "caps_ratio": 0.0,
+        "repetition_ratio": 1.0,
+        "emoji_ratio": 1.0,
+        "likes_per_char": 0.0
+      }
+    ],
+    "uncertain": [
+      {
+        "commentId": 302561,
+        "textOriginal": "Aiiiiiiya best rahega ab😂",
+        "classification_confidence": 0.600102057179656,
+        "caps_ratio": 0.04,
+        "repetition_ratio": 0.25,
+        "emoji_ratio": 0.04,
+        "likes_per_char": 0.3461538461538461
+      },
+      {
+        "commentId": 2339655,
+        "textOriginal": "Il serait plus intéressant de te sublimer en tant que femme noire plutôt que d’essayer de ressembler à kylie jenner de m….! Et puis avant de te maquiller faudrait arrêter de te tartiner la face de crème chocolat pour encore induire que ta couleur choco c’est de la merd..! T’aq une grande communauté participe à valoriser la black woman au lieu du contraire. merci!",
+        "classification_confidence": 0.6001405932655712,
+        "caps_ratio": 0.0082191780821917,
+        "repetition_ratio": 0.109375,
+        "emoji_ratio": 0.0,
+        "likes_per_char": 0.0027322404371584
+      },
+      {
+        "commentId": 851561,
+        "textOriginal": "\"OMG IT'S SOO OFFENSIVVVVVE\" generation.",
+        "classification_confidence": 0.6006018688805211,
+        "caps_ratio": 0.55,
+        "repetition_ratio": 0.2,
+        "emoji_ratio": 0.0,
+        "likes_per_char": 0.0
+      },
+      {
+        "commentId": 346147,
+        "textOriginal": "Awww omg let me pin you right away 🥰🥰",
+        "classification_confidence": 0.6000968095383001,
+        "caps_ratio": 0.027027027027027,
+        "repetition_ratio": 0.1111111111111111,
+        "emoji_ratio": 0.054054054054054,
+        "likes_per_char": 0.3421052631578947
+      },
+      {
+        "commentId": 2677046,
+        "textOriginal": "Skinny jeans with knee-high boots and a cute cropped sweater looks adorable! That's an idea for my beautiful girlies who likes/feel comfy with them~ We all have a personal style and thats totally okay! There are lots of ways you can style them,   if she can't is bc she's not creative enough, don't let people tell u what to wear, if you feel beautiful and comfortable that's perfect <3",
+        "classification_confidence": 0.600161950609072,
+        "caps_ratio": 0.0104166666666666,
+        "repetition_ratio": 0.0434782608695652,
+        "emoji_ratio": 0.0,
+        "likes_per_char": 0.0
+      }
+    ]
+  },
+  "topic_analysis": {
+    "leaderboard": [
+      {
+        "dominullt_topic": 20,
+        "video_count": 8076,
+        "avg_confidence": 0.347,
+        "total_comments": 575376,
+        "total_views": 3038468297.0,
+        "percentage": 23.1
+      },
+      {
+        "dominullt_topic": 21,
+        "video_count": 5944,
+        "avg_confidence": 0.408,
+        "total_comments": 1262685,
+        "total_views": 8423919003.0,
+        "percentage": 17.0
+      },
+      {
+        "dominullt_topic": 14,
+        "video_count": 4698,
+        "avg_confidence": 0.345,
+        "total_comments": 19493,
+        "total_views": 94196771.0,
+        "percentage": 13.4
+      },
+      {
+        "dominullt_topic": 6,
+        "video_count": 4008,
+        "avg_confidence": 0.397,
+        "total_comments": 31312,
+        "total_views": 221017954.0,
+        "percentage": 11.5
+      },
+      {
+        "dominullt_topic": 3,
+        "video_count": 2408,
+        "avg_confidence": 0.329,
+        "total_comments": 59561,
+        "total_views": 238761968.0,
+        "percentage": 6.9
+      },
+      {
+        "dominullt_topic": 5,
+        "video_count": 1940,
+        "avg_confidence": 0.254,
+        "total_comments": 3988,
+        "total_views": 27229134.0,
+        "percentage": 5.6
+      },
+      {
+        "dominullt_topic": 15,
+        "video_count": 1666,
+        "avg_confidence": 0.343,
+        "total_comments": 196290,
+        "total_views": 1512299712.0,
+        "percentage": 4.8
+      },
+      {
+        "dominullt_topic": 18,
+        "video_count": 1195,
+        "avg_confidence": 0.275,
+        "total_comments": 7701,
+        "total_views": 83703955.0,
+        "percentage": 3.4
+      },
+      {
+        "dominullt_topic": 10,
+        "video_count": 1053,
+        "avg_confidence": 0.341,
+        "total_comments": 318382,
+        "total_views": 3377465625.0,
+        "percentage": 3.0
+      },
+      {
+        "dominullt_topic": 1,
+        "video_count": 832,
+        "avg_confidence": 0.291,
+        "total_comments": 191466,
+        "total_views": 1223431546.0,
+        "percentage": 2.4
+      },
+      {
+        "dominullt_topic": 12,
+        "video_count": 409,
+        "avg_confidence": 0.262,
+        "total_comments": 6375,
+        "total_views": 76422416.0,
+        "percentage": 1.2
+      },
+      {
+        "dominullt_topic": 17,
+        "video_count": 369,
+        "avg_confidence": 0.298,
+        "total_comments": 144947,
+        "total_views": 855540679.0,
+        "percentage": 1.1
+      },
+      {
+        "dominullt_topic": 2,
+        "video_count": 363,
+        "avg_confidence": 0.307,
+        "total_comments": 33064,
+        "total_views": 265069082.0,
+        "percentage": 1.0
+      },
+      {
+        "dominullt_topic": 19,
+        "video_count": 350,
+        "avg_confidence": 0.28,
+        "total_comments": 3304,
+        "total_views": 39863265.0,
+        "percentage": 1.0
+      },
+      {
+        "dominullt_topic": 9,
+        "video_count": 318,
+        "avg_confidence": 0.482,
+        "total_comments": 26196,
+        "total_views": 214947895.0,
+        "percentage": 0.9
+      },
+      {
+        "dominullt_topic": 7,
+        "video_count": 299,
+        "avg_confidence": 0.534,
+        "total_comments": 1106,
+        "total_views": 19178064.0,
+        "percentage": 0.9
+      },
+      {
+        "dominullt_topic": 4,
+        "video_count": 247,
+        "avg_confidence": 0.485,
+        "total_comments": 23169,
+        "total_views": 188352243.0,
+        "percentage": 0.7
+      },
+      {
+        "dominullt_topic": 11,
+        "video_count": 181,
+        "avg_confidence": 0.437,
+        "total_comments": 20565,
+        "total_views": 378706498.0,
+        "percentage": 0.5
+      },
+      {
+        "dominullt_topic": 8,
+        "video_count": 166,
+        "avg_confidence": 0.283,
+        "total_comments": 1145,
+        "total_views": 3956314.0,
+        "percentage": 0.5
+      },
+      {
+        "dominullt_topic": 0,
+        "video_count": 109,
+        "avg_confidence": 0.375,
+        "total_comments": 6201,
+        "total_views": 53632386.0,
+        "percentage": 0.3
+      },
+      {
+        "dominullt_topic": 24,
+        "video_count": 85,
+        "avg_confidence": 0.245,
+        "total_comments": 191,
+        "total_views": 875178.0,
+        "percentage": 0.2
+      },
+      {
+        "dominullt_topic": 22,
+        "video_count": 75,
+        "avg_confidence": 0.286,
+        "total_comments": 13928,
+        "total_views": 39675034.0,
+        "percentage": 0.2
+      },
+      {
+        "dominullt_topic": 16,
+        "video_count": 74,
+        "avg_confidence": 0.24,
+        "total_comments": 15451,
+        "total_views": 99694948.0,
+        "percentage": 0.2
+      },
+      {
+        "dominullt_topic": 13,
+        "video_count": 44,
+        "avg_confidence": 0.346,
+        "total_comments": 8163,
+        "total_views": 57377929.0,
+        "percentage": 0.1
+      },
+      {
+        "dominullt_topic": 25,
+        "video_count": 39,
+        "avg_confidence": 0.36,
+        "total_comments": 117619,
+        "total_views": 263850851.0,
+        "percentage": 0.1
+      },
+      {
+        "dominullt_topic": 23,
+        "video_count": 1,
+        "avg_confidence": 0.316,
+        "total_comments": 1,
+        "total_views": 317.0,
+        "percentage": 0.0
+      }
+    ],
+    "keywords": {
+      "0": [
+        {
+          "keyword": "no",
+          "probability": 0.20644769,
+          "frequency": 6948
+        },
+        {
+          "keyword": "de",
+          "probability": 0.08454945,
+          "frequency": 2948
+        },
+        {
+          "keyword": "que",
+          "probability": 0.056187548,
+          "frequency": 1716
+        },
+        {
+          "keyword": "se",
+          "probability": 0.033611078,
+          "frequency": 3455
+        },
+        {
+          "keyword": "para",
+          "probability": 0.025946843,
+          "frequency": 968
+        },
+        {
+          "keyword": "da",
+          "probability": 0.022748888,
+          "frequency": 1264
+        },
+        {
+          "keyword": "mas",
+          "probability": 0.021258134,
+          "frequency": 815
+        },
+        {
+          "keyword": "si",
+          "probability": 0.018546157,
+          "frequency": 1616
+        },
+        {
+          "keyword": "na",
+          "probability": 0.016814815,
+          "frequency": 2565
+        },
+        {
+          "keyword": "com",
+          "probability": 0.016242296,
+          "frequency": 6749
+        }
+      ],
+      "1": [
+        {
+          "keyword": "you",
+          "probability": 0.17357807,
+          "frequency": 18296
+        },
+        {
+          "keyword": "beautiful",
+          "probability": 0.08296874,
+          "frequency": 10681
+        },
+        {
+          "keyword": "so",
+          "probability": 0.081831776,
+          "frequency": 13167
+        },
+        {
+          "keyword": "are",
+          "probability": 0.062304836,
+          "frequency": 10313
+        },
+        {
+          "keyword": "your",
+          "probability": 0.054581136,
+          "frequency": 12985
+        },
+        {
+          "keyword": "look",
+          "probability": 0.03893038,
+          "frequency": 11474
+        },
+        {
+          "keyword": "pretty",
+          "probability": 0.035124734,
+          "frequency": 6022
+        },
+        {
+          "keyword": "love",
+          "probability": 0.028023219,
+          "frequency": 10640
+        },
+        {
+          "keyword": "gorgeous",
+          "probability": 0.019890439,
+          "frequency": 5118
+        },
+        {
+          "keyword": "and",
+          "probability": 0.019026238,
+          "frequency": 16314
+        }
+      ],
+      "2": [
+        {
+          "keyword": "you",
+          "probability": 0.16047707,
+          "frequency": 18296
+        },
+        {
+          "keyword": "thank",
+          "probability": 0.13644713,
+          "frequency": 8940
+        },
+        {
+          "keyword": "please",
+          "probability": 0.11309106,
+          "frequency": 8096
+        },
+        {
+          "keyword": "video",
+          "probability": 0.074951544,
+          "frequency": 9874
+        },
+        {
+          "keyword": "much",
+          "probability": 0.050006773,
+          "frequency": 7296
+        },
+        {
+          "keyword": "thanks",
+          "probability": 0.046683576,
+          "frequency": 5916
+        },
+        {
+          "keyword": "share",
+          "probability": 0.044525776,
+          "frequency": 4089
+        },
+        {
+          "keyword": "so",
+          "probability": 0.032256693,
+          "frequency": 13167
+        },
+        {
+          "keyword": "dear",
+          "probability": 0.029314356,
+          "frequency": 2632
+        },
+        {
+          "keyword": "very",
+          "probability": 0.0250016,
+          "frequency": 7186
+        }
+      ],
+      "3": [
+        {
+          "keyword": "skin",
+          "probability": 0.07283066,
+          "frequency": 7457
+        },
+        {
+          "keyword": "care",
+          "probability": 0.04481781,
+          "frequency": 4317
+        },
+        {
+          "keyword": "for",
+          "probability": 0.03501801,
+          "frequency": 15143
+        },
+        {
+          "keyword": "skincare",
+          "probability": 0.031103885,
+          "frequency": 4464
+        },
+        {
+          "keyword": "and",
+          "probability": 0.027076876,
+          "frequency": 16314
+        },
+        {
+          "keyword": "to",
+          "probability": 0.024474662,
+          "frequency": 16088
+        },
+        {
+          "keyword": "use",
+          "probability": 0.023790032,
+          "frequency": 6816
+        },
+        {
+          "keyword": "your",
+          "probability": 0.01892925,
+          "frequency": 12985
+        },
+        {
+          "keyword": "face",
+          "probability": 0.016007764,
+          "frequency": 6991
+        },
+        {
+          "keyword": "routine",
+          "probability": 0.013579629,
+          "frequency": 2704
+        }
+      ],
+      "4": [
+        {
+          "keyword": "cantik",
+          "probability": 0.16098875,
+          "frequency": 356
+        },
+        {
+          "keyword": "nya",
+          "probability": 0.075158365,
+          "frequency": 369
+        },
+        {
+          "keyword": "di",
+          "probability": 0.05804116,
+          "frequency": 2882
+        },
+        {
+          "keyword": "yang",
+          "probability": 0.047238473,
+          "frequency": 287
+        },
+        {
+          "keyword": "sama",
+          "probability": 0.03920649,
+          "frequency": 225
+        },
+        {
+          "keyword": "itu",
+          "probability": 0.033325,
+          "frequency": 272
+        },
+        {
+          "keyword": "china",
+          "probability": 0.033016894,
+          "frequency": 294
+        },
+        {
+          "keyword": "ya",
+          "probability": 0.029668601,
+          "frequency": 2632
+        },
+        {
+          "keyword": "ada",
+          "probability": 0.019461231,
+          "frequency": 279
+        },
+        {
+          "keyword": "yg",
+          "probability": 0.017669575,
+          "frequency": 260
+        }
+      ],
+      "5": [
+        {
+          "keyword": null,
+          "probability": 0.26659685,
+          "frequency": 19804
+        },
+        {
+          "keyword": "shorts",
+          "probability": 0.22469641,
+          "frequency": 9702
+        },
+        {
+          "keyword": "beauty",
+          "probability": 0.08805989,
+          "frequency": 9421
+        },
+        {
+          "keyword": "viral",
+          "probability": 0.061000496,
+          "frequency": 2995
+        },
+        {
+          "keyword": "trending",
+          "probability": 0.048104025,
+          "frequency": 2968
+        },
+        {
+          "keyword": "transformation",
+          "probability": 0.041936368,
+          "frequency": 3086
+        },
+        {
+          "keyword": "nice",
+          "probability": 0.028988056,
+          "frequency": 7522
+        },
+        {
+          "keyword": "beautiful",
+          "probability": 0.02759299,
+          "frequency": 10681
+        },
+        {
+          "keyword": "nykaa",
+          "probability": 0.025423933,
+          "frequency": 578
+        },
+        {
+          "keyword": "short",
+          "probability": 0.020218434,
+          "frequency": 3218
+        }
+      ],
+      "6": [
+        {
+          "keyword": "https",
+          "probability": 0.07232965,
+          "frequency": 6619
+        },
+        {
+          "keyword": "com",
+          "probability": 0.047591392,
+          "frequency": 6749
+        },
+        {
+          "keyword": "to",
+          "probability": 0.043886263,
+          "frequency": 16088
+        },
+        {
+          "keyword": "www",
+          "probability": 0.03089693,
+          "frequency": 4765
+        },
+        {
+          "keyword": "for",
+          "probability": 0.027135704,
+          "frequency": 15143
+        },
+        {
+          "keyword": "instagram",
+          "probability": 0.020481585,
+          "frequency": 5402
+        },
+        {
+          "keyword": "and",
+          "probability": 0.020139862,
+          "frequency": 16314
+        },
+        {
+          "keyword": "video",
+          "probability": 0.016025843,
+          "frequency": 9874
+        },
+        {
+          "keyword": "youtube",
+          "probability": 0.01599797,
+          "frequency": 4865
+        },
+        {
+          "keyword": "on",
+          "probability": 0.015773831,
+          "frequency": 11158
+        }
+      ],
+      "7": [
+        {
+          "keyword": "face",
+          "probability": 0.164541,
+          "frequency": 6991
+        },
+        {
+          "keyword": "yoga",
+          "probability": 0.05253101,
+          "frequency": 610
+        },
+        {
+          "keyword": "to",
+          "probability": 0.052147016,
+          "frequency": 16088
+        },
+        {
+          "keyword": "chin",
+          "probability": 0.04138463,
+          "frequency": 703
+        },
+        {
+          "keyword": "facial",
+          "probability": 0.0327447,
+          "frequency": 1765
+        },
+        {
+          "keyword": "side",
+          "probability": 0.029715465,
+          "frequency": 1858
+        },
+        {
+          "keyword": "for",
+          "probability": 0.027686063,
+          "frequency": 15143
+        },
+        {
+          "keyword": "eyes",
+          "probability": 0.027294967,
+          "frequency": 3405
+        },
+        {
+          "keyword": "eye",
+          "probability": 0.026159804,
+          "frequency": 3264
+        },
+        {
+          "keyword": "wrinkles",
+          "probability": 0.021621568,
+          "frequency": 843
+        }
+      ],
+      "8": [
+        {
+          "keyword": "men",
+          "probability": 0.08916153,
+          "frequency": 2668
+        },
+        {
+          "keyword": "he",
+          "probability": 0.080758154,
+          "frequency": 3392
+        },
+        {
+          "keyword": "man",
+          "probability": 0.046627093,
+          "frequency": 2306
+        },
+        {
+          "keyword": "bro",
+          "probability": 0.036338426,
+          "frequency": 2571
+        },
+        {
+          "keyword": "gay",
+          "probability": 0.035840023,
+          "frequency": 731
+        },
+        {
+          "keyword": "his",
+          "probability": 0.03205951,
+          "frequency": 1585
+        },
+        {
+          "keyword": "is",
+          "probability": 0.025497774,
+          "frequency": 13945
+        },
+        {
+          "keyword": "care",
+          "probability": 0.025358478,
+          "frequency": 4317
+        },
+        {
+          "keyword": "women",
+          "probability": 0.024915595,
+          "frequency": 2964
+        },
+        {
+          "keyword": "him",
+          "probability": 0.023774363,
+          "frequency": 1216
+        }
+      ],
+      "9": [
+        {
+          "keyword": "que",
+          "probability": 0.059099715,
+          "frequency": 1716
+        },
+        {
+          "keyword": "de",
+          "probability": 0.033275615,
+          "frequency": 2948
+        },
+        {
+          "keyword": "el",
+          "probability": 0.031048367,
+          "frequency": 1133
+        },
+        {
+          "keyword": "me",
+          "probability": 0.026395377,
+          "frequency": 10913
+        },
+        {
+          "keyword": "es",
+          "probability": 0.026330141,
+          "frequency": 1455
+        },
+        {
+          "keyword": "la",
+          "probability": 0.026324373,
+          "frequency": 1952
+        },
+        {
+          "keyword": "linda",
+          "probability": 0.020303411,
+          "frequency": 830
+        },
+        {
+          "keyword": "se",
+          "probability": 0.020210885,
+          "frequency": 3455
+        },
+        {
+          "keyword": "lo",
+          "probability": 0.01786225,
+          "frequency": 1507
+        },
+        {
+          "keyword": "en",
+          "probability": 0.017553153,
+          "frequency": 1454
+        }
+      ],
+      "10": [
+        {
+          "keyword": "hai",
+          "probability": 0.058572017,
+          "frequency": 3827
+        },
+        {
+          "keyword": "ho",
+          "probability": 0.028890599,
+          "frequency": 3047
+        },
+        {
+          "keyword": "to",
+          "probability": 0.023284119,
+          "frequency": 16088
+        },
+        {
+          "keyword": "bhi",
+          "probability": 0.019301407,
+          "frequency": 2362
+        },
+        {
+          "keyword": "ki",
+          "probability": 0.017684579,
+          "frequency": 2694
+        },
+        {
+          "keyword": "se",
+          "probability": 0.016986001,
+          "frequency": 3455
+        },
+        {
+          "keyword": "ke",
+          "probability": 0.016894646,
+          "frequency": 2439
+        },
+        {
+          "keyword": "kya",
+          "probability": 0.01490615,
+          "frequency": 2415
+        },
+        {
+          "keyword": "hi",
+          "probability": 0.014356508,
+          "frequency": 5130
+        },
+        {
+          "keyword": "didi",
+          "probability": 0.013054749,
+          "frequency": 1845
+        }
+      ],
+      "11": [
+        {
+          "keyword": "не",
+          "probability": 0.059338517,
+          "frequency": 765
+        },
+        {
+          "keyword": "la",
+          "probability": 0.04631252,
+          "frequency": 1952
+        },
+        {
+          "keyword": "tu",
+          "probability": 0.04063477,
+          "frequency": 1673
+        },
+        {
+          "keyword": "это",
+          "probability": 0.035146274,
+          "frequency": 601
+        },
+        {
+          "keyword": "de",
+          "probability": 0.03304381,
+          "frequency": 2948
+        },
+        {
+          "keyword": "es",
+          "probability": 0.03070512,
+          "frequency": 1455
+        },
+        {
+          "keyword": "на",
+          "probability": 0.02944792,
+          "frequency": 625
+        },
+        {
+          "keyword": "le",
+          "probability": 0.028856738,
+          "frequency": 1617
+        },
+        {
+          "keyword": "est",
+          "probability": 0.027401859,
+          "frequency": 664
+        },
+        {
+          "keyword": "как",
+          "probability": 0.026896862,
+          "frequency": 590
+        }
+      ],
+      "12": [
+        {
+          "keyword": "wig",
+          "probability": 0.051284872,
+          "frequency": 1299
+        },
+        {
+          "keyword": "wigs",
+          "probability": 0.032814838,
+          "frequency": 1062
+        },
+        {
+          "keyword": "for",
+          "probability": 0.02834968,
+          "frequency": 15143
+        },
+        {
+          "keyword": "curly",
+          "probability": 0.028242273,
+          "frequency": 1402
+        },
+        {
+          "keyword": "call",
+          "probability": 0.027703118,
+          "frequency": 1541
+        },
+        {
+          "keyword": "wet",
+          "probability": 0.027202988,
+          "frequency": 766
+        },
+        {
+          "keyword": "straight",
+          "probability": 0.02531916,
+          "frequency": 1630
+        },
+        {
+          "keyword": "dry",
+          "probability": 0.023796422,
+          "frequency": 2086
+        },
+        {
+          "keyword": "hairstyles",
+          "probability": 0.02261423,
+          "frequency": 1506
+        },
+        {
+          "keyword": "length",
+          "probability": 0.021025354,
+          "frequency": 926
+        }
+      ],
+      "13": [
+        {
+          "keyword": "du",
+          "probability": 0.24512649,
+          "frequency": 648
+        },
+        {
+          "keyword": "blonde",
+          "probability": 0.121729456,
+          "frequency": 1110
+        },
+        {
+          "keyword": "die",
+          "probability": 0.07271032,
+          "frequency": 893
+        },
+        {
+          "keyword": "dye",
+          "probability": 0.06587407,
+          "frequency": 725
+        },
+        {
+          "keyword": "minutes",
+          "probability": 0.053255774,
+          "frequency": 996
+        },
+        {
+          "keyword": "mehr",
+          "probability": 0.046357643,
+          "frequency": 99
+        },
+        {
+          "keyword": "ich",
+          "probability": 0.045645736,
+          "frequency": 404
+        },
+        {
+          "keyword": "hast",
+          "probability": 0.04544568,
+          "frequency": 111
+        },
+        {
+          "keyword": "vs",
+          "probability": 0.041710224,
+          "frequency": 946
+        },
+        {
+          "keyword": "hat",
+          "probability": 0.024697347,
+          "frequency": 547
+        }
+      ],
+      "14": [
+        {
+          "keyword": "makeup",
+          "probability": 0.07259281,
+          "frequency": 13025
+        },
+        {
+          "keyword": "lipstick",
+          "probability": 0.038052063,
+          "frequency": 3712
+        },
+        {
+          "keyword": "look",
+          "probability": 0.027980108,
+          "frequency": 11474
+        },
+        {
+          "keyword": "lip",
+          "probability": 0.02789814,
+          "frequency": 3589
+        },
+        {
+          "keyword": "blush",
+          "probability": 0.025424197,
+          "frequency": 2830
+        },
+        {
+          "keyword": "foundation",
+          "probability": 0.023848154,
+          "frequency": 3369
+        },
+        {
+          "keyword": "shade",
+          "probability": 0.020913662,
+          "frequency": 3045
+        },
+        {
+          "keyword": "lips",
+          "probability": 0.020500336,
+          "frequency": 2365
+        },
+        {
+          "keyword": "products",
+          "probability": 0.017464412,
+          "frequency": 5977
+        },
+        {
+          "keyword": "tutorial",
+          "probability": 0.014937623,
+          "frequency": 3406
+        }
+      ],
+      "15": [
+        {
+          "keyword": "nice",
+          "probability": 0.023506103,
+          "frequency": 7522
+        },
+        {
+          "keyword": "di",
+          "probability": 0.022924522,
+          "frequency": 2882
+        },
+        {
+          "keyword": "please",
+          "probability": 0.020989956,
+          "frequency": 8096
+        },
+        {
+          "keyword": "mam",
+          "probability": 0.018814746,
+          "frequency": 2284
+        },
+        {
+          "keyword": "very",
+          "probability": 0.018056175,
+          "frequency": 7186
+        },
+        {
+          "keyword": "plz",
+          "probability": 0.017039876,
+          "frequency": 3409
+        },
+        {
+          "keyword": "aap",
+          "probability": 0.016668165,
+          "frequency": 2284
+        },
+        {
+          "keyword": "hai",
+          "probability": 0.015619008,
+          "frequency": 3827
+        },
+        {
+          "keyword": "ap",
+          "probability": 0.014792826,
+          "frequency": 1693
+        },
+        {
+          "keyword": "ho",
+          "probability": 0.014320395,
+          "frequency": 3047
+        }
+      ],
+      "16": [
+        {
+          "keyword": "cute",
+          "probability": 0.16201144,
+          "frequency": 4830
+        },
+        {
+          "keyword": "is",
+          "probability": 0.14144209,
+          "frequency": 13945
+        },
+        {
+          "keyword": "name",
+          "probability": 0.09550161,
+          "frequency": 3998
+        },
+        {
+          "keyword": "like",
+          "probability": 0.06501769,
+          "frequency": 11095
+        },
+        {
+          "keyword": "so",
+          "probability": 0.059201326,
+          "frequency": 13167
+        },
+        {
+          "keyword": "girl",
+          "probability": 0.055187806,
+          "frequency": 5915
+        },
+        {
+          "keyword": "song",
+          "probability": 0.036273897,
+          "frequency": 2470
+        },
+        {
+          "keyword": "me",
+          "probability": 0.029808944,
+          "frequency": 10913
+        },
+        {
+          "keyword": "super",
+          "probability": 0.019742338,
+          "frequency": 4006
+        },
+        {
+          "keyword": "fake",
+          "probability": 0.019318445,
+          "frequency": 1611
+        }
+      ],
+      "17": [
+        {
+          "keyword": "she",
+          "probability": 0.12066726,
+          "frequency": 5516
+        },
+        {
+          "keyword": "her",
+          "probability": 0.072315216,
+          "frequency": 5027
+        },
+        {
+          "keyword": "is",
+          "probability": 0.042713318,
+          "frequency": 13945
+        },
+        {
+          "keyword": "the",
+          "probability": 0.031550013,
+          "frequency": 16606
+        },
+        {
+          "keyword": "that",
+          "probability": 0.026586639,
+          "frequency": 10508
+        },
+        {
+          "keyword": "to",
+          "probability": 0.021830978,
+          "frequency": 16088
+        },
+        {
+          "keyword": "looks",
+          "probability": 0.020802908,
+          "frequency": 6092
+        },
+        {
+          "keyword": "like",
+          "probability": 0.017729959,
+          "frequency": 11095
+        },
+        {
+          "keyword": "beautiful",
+          "probability": 0.016502025,
+          "frequency": 10681
+        },
+        {
+          "keyword": "was",
+          "probability": 0.01109403,
+          "frequency": 5662
+        }
+      ],
+      "18": [
+        {
+          "keyword": "hair",
+          "probability": 0.42555234,
+          "frequency": 12389
+        },
+        {
+          "keyword": "it",
+          "probability": 0.05187604,
+          "frequency": 13372
+        },
+        {
+          "keyword": "cut",
+          "probability": 0.04888833,
+          "frequency": 2282
+        },
+        {
+          "keyword": "long",
+          "probability": 0.047314815,
+          "frequency": 4594
+        },
+        {
+          "keyword": "my",
+          "probability": 0.036060613,
+          "frequency": 12568
+        },
+        {
+          "keyword": "have",
+          "probability": 0.02734992,
+          "frequency": 8452
+        },
+        {
+          "keyword": "short",
+          "probability": 0.01932998,
+          "frequency": 3218
+        },
+        {
+          "keyword": "with",
+          "probability": 0.01725849,
+          "frequency": 11448
+        },
+        {
+          "keyword": "style",
+          "probability": 0.01673643,
+          "frequency": 4214
+        },
+        {
+          "keyword": "haircut",
+          "probability": 0.015294337,
+          "frequency": 1738
+        }
+      ],
+      "19": [
+        {
+          "keyword": "makeup",
+          "probability": 0.3178344,
+          "frequency": 13025
+        },
+        {
+          "keyword": "up",
+          "probability": 0.085881375,
+          "frequency": 7425
+        },
+        {
+          "keyword": "make",
+          "probability": 0.08337939,
+          "frequency": 7086
+        },
+        {
+          "keyword": "look",
+          "probability": 0.04399109,
+          "frequency": 11474
+        },
+        {
+          "keyword": "like",
+          "probability": 0.03234727,
+          "frequency": 11095
+        },
+        {
+          "keyword": "beautiful",
+          "probability": 0.027145786,
+          "frequency": 10681
+        },
+        {
+          "keyword": "so",
+          "probability": 0.02461469,
+          "frequency": 13167
+        },
+        {
+          "keyword": "without",
+          "probability": 0.02201683,
+          "frequency": 3667
+        },
+        {
+          "keyword": "is",
+          "probability": 0.017734617,
+          "frequency": 13945
+        },
+        {
+          "keyword": "very",
+          "probability": 0.016999489,
+          "frequency": 7186
+        }
+      ],
+      "20": [
+        {
+          "keyword": "the",
+          "probability": 0.057074886,
+          "frequency": 16606
+        },
+        {
+          "keyword": "you",
+          "probability": 0.037315447,
+          "frequency": 18296
+        },
+        {
+          "keyword": "and",
+          "probability": 0.034672022,
+          "frequency": 16314
+        },
+        {
+          "keyword": "love",
+          "probability": 0.03070974,
+          "frequency": 10640
+        },
+        {
+          "keyword": "this",
+          "probability": 0.027970886,
+          "frequency": 12918
+        },
+        {
+          "keyword": "it",
+          "probability": 0.027420165,
+          "frequency": 13372
+        },
+        {
+          "keyword": "so",
+          "probability": 0.026944,
+          "frequency": 13167
+        },
+        {
+          "keyword": "is",
+          "probability": 0.019991837,
+          "frequency": 13945
+        },
+        {
+          "keyword": "my",
+          "probability": 0.019831028,
+          "frequency": 12568
+        },
+        {
+          "keyword": "of",
+          "probability": 0.017715571,
+          "frequency": 11865
+        }
+      ],
+      "21": [
+        {
+          "keyword": "the",
+          "probability": 0.03388627,
+          "frequency": 16606
+        },
+        {
+          "keyword": "it",
+          "probability": 0.032069396,
+          "frequency": 13372
+        },
+        {
+          "keyword": "and",
+          "probability": 0.028485078,
+          "frequency": 16314
+        },
+        {
+          "keyword": "to",
+          "probability": 0.027278714,
+          "frequency": 16088
+        },
+        {
+          "keyword": "that",
+          "probability": 0.023966957,
+          "frequency": 10508
+        },
+        {
+          "keyword": "you",
+          "probability": 0.023523666,
+          "frequency": 18296
+        },
+        {
+          "keyword": "is",
+          "probability": 0.021614544,
+          "frequency": 13945
+        },
+        {
+          "keyword": "of",
+          "probability": 0.020199278,
+          "frequency": 11865
+        },
+        {
+          "keyword": "my",
+          "probability": 0.014660872,
+          "frequency": 12568
+        },
+        {
+          "keyword": "not",
+          "probability": 0.014243036,
+          "frequency": 7610
+        }
+      ],
+      "22": [
+        {
+          "keyword": "brown",
+          "probability": 0.08895687,
+          "frequency": 2125
+        },
+        {
+          "keyword": "blue",
+          "probability": 0.08695012,
+          "frequency": 1426
+        },
+        {
+          "keyword": "black",
+          "probability": 0.07486879,
+          "frequency": 3346
+        },
+        {
+          "keyword": "color",
+          "probability": 0.0693272,
+          "frequency": 3978
+        },
+        {
+          "keyword": "white",
+          "probability": 0.060201313,
+          "frequency": 2335
+        },
+        {
+          "keyword": "colour",
+          "probability": 0.04346036,
+          "frequency": 2748
+        },
+        {
+          "keyword": "green",
+          "probability": 0.04085323,
+          "frequency": 1084
+        },
+        {
+          "keyword": "dark",
+          "probability": 0.039501645,
+          "frequency": 2498
+        },
+        {
+          "keyword": "red",
+          "probability": 0.03153197,
+          "frequency": 2129
+        },
+        {
+          "keyword": "yellow",
+          "probability": 0.030691322,
+          "frequency": 716
+        }
+      ],
+      "23": [
+        {
+          "keyword": "rihanna",
+          "probability": 0.2992036,
+          "frequency": 171
+        },
+        {
+          "keyword": "tan",
+          "probability": 0.26918837,
+          "frequency": 1063
+        },
+        {
+          "keyword": "baby",
+          "probability": 0.13173044,
+          "frequency": 1886
+        },
+        {
+          "keyword": "usa",
+          "probability": 0.07694632,
+          "frequency": 581
+        },
+        {
+          "keyword": "nina",
+          "probability": 0.040614896,
+          "frequency": 178
+        },
+        {
+          "keyword": "unos",
+          "probability": 0.01999377,
+          "frequency": 103
+        },
+        {
+          "keyword": "dentro",
+          "probability": 0.016550751,
+          "frequency": 70
+        },
+        {
+          "keyword": "entiendo",
+          "probability": 0.014373346,
+          "frequency": 121
+        },
+        {
+          "keyword": "perfecta",
+          "probability": 0.013006126,
+          "frequency": 100
+        },
+        {
+          "keyword": "pa",
+          "probability": 0.012435839,
+          "frequency": 609
+        }
+      ],
+      "24": [
+        {
+          "keyword": "hairstyle",
+          "probability": 0.15711072,
+          "frequency": 3588
+        },
+        {
+          "keyword": "fashion",
+          "probability": 0.1405466,
+          "frequency": 2304
+        },
+        {
+          "keyword": "outfit",
+          "probability": 0.11467014,
+          "frequency": 1401
+        },
+        {
+          "keyword": "youtubeshorts",
+          "probability": 0.109737314,
+          "frequency": 2680
+        },
+        {
+          "keyword": "styling",
+          "probability": 0.08615831,
+          "frequency": 1795
+        },
+        {
+          "keyword": "summer",
+          "probability": 0.057055168,
+          "frequency": 1646
+        },
+        {
+          "keyword": "amp",
+          "probability": 0.055844277,
+          "frequency": 1921
+        },
+        {
+          "keyword": "ytshorts",
+          "probability": 0.046055704,
+          "frequency": 1073
+        },
+        {
+          "keyword": "saree",
+          "probability": 0.04469723,
+          "frequency": 477
+        },
+        {
+          "keyword": "viralvideo",
+          "probability": 0.034386016,
+          "frequency": 894
+        }
+      ],
+      "25": [
+        {
+          "keyword": "bts",
+          "probability": 0.15520936,
+          "frequency": 518
+        },
+        {
+          "keyword": "india",
+          "probability": 0.11807297,
+          "frequency": 1636
+        },
+        {
+          "keyword": "indian",
+          "probability": 0.11142315,
+          "frequency": 1895
+        },
+        {
+          "keyword": "is",
+          "probability": 0.07683717,
+          "frequency": 13945
+        },
+        {
+          "keyword": "korean",
+          "probability": 0.06455777,
+          "frequency": 1075
+        },
+        {
+          "keyword": "pakistan",
+          "probability": 0.058398083,
+          "frequency": 815
+        },
+        {
+          "keyword": "love",
+          "probability": 0.043478608,
+          "frequency": 10640
+        },
+        {
+          "keyword": "best",
+          "probability": 0.036721397,
+          "frequency": 6290
+        },
+        {
+          "keyword": "pakistani",
+          "probability": 0.03149461,
+          "frequency": 430
+        },
+        {
+          "keyword": "both",
+          "probability": 0.025804345,
+          "frequency": 2188
+        }
+      ]
+    },
+    "top_videos": {
+      "0": [
+        {
+          "videoId": 45352,
+          "video_title": "Já testaram essa dica?  ❤️.#shorts  #cabelo #cabelolindo #cabeloslindos #legging",
+          "topic_probability": 0.6741121,
+          "viewCount": 4672338.0,
+          "num_comments": 1101
+        },
+        {
+          "videoId": 76945,
+          "video_title": "QUANDO NÃO GOSTO DE UM PERFUME",
+          "topic_probability": 0.66090167,
+          "viewCount": 15981.0,
+          "num_comments": 10
+        },
+        {
+          "videoId": 54558,
+          "video_title": "Lesson of Worth Tais Araújo",
+          "topic_probability": 0.6561556,
+          "viewCount": 12925686.0,
+          "num_comments": 75
+        }
+      ],
+      "1": [
+        {
+          "videoId": 5082,
+          "video_title": "جسمك هيبقي شمعه 🕯️ بعد الفيديو دا",
+          "topic_probability": 0.6612509,
+          "viewCount": 1601365.0,
+          "num_comments": 371
+        },
+        {
+          "videoId": 21398,
+          "video_title": "My $1 billion lip combo #rhode #haileybieber #ugcbeauty #whiteeyelashes #lipcombo",
+          "topic_probability": 0.6136578,
+          "viewCount": 48329.0,
+          "num_comments": 8
+        },
+        {
+          "videoId": 4986,
+          "video_title": "XXL VOLUME 🎉😊#SHORTS #BIGHAIR #PONYTAILTUTORIAL",
+          "topic_probability": 0.56788737,
+          "viewCount": 4597.0,
+          "num_comments": 3
+        }
+      ],
+      "2": [
+        {
+          "videoId": 70734,
+          "video_title": "ফাউন্ডেশন/ফেসপাউডার/আইশ্যাডো মেকাপের যা নিবেন ১৫০ || Makeup products under 150 tk 😱🔥🔥🔥😱",
+          "topic_probability": 0.75628066,
+          "viewCount": 121564.0,
+          "num_comments": 88
+        },
+        {
+          "videoId": 70343,
+          "video_title": "Sweatproof Long-lasting Summer Wedding 💍💒 Guest Makeup 💙💄✨",
+          "topic_probability": 0.721852,
+          "viewCount": 23865.0,
+          "num_comments": 22
+        },
+        {
+          "videoId": 26809,
+          "video_title": "✨️Self Bengali Bridal makeup✨️#viral #makeuptutorial #shorts #selfbridalmakeup #bridalmakeup",
+          "topic_probability": 0.64479524,
+          "viewCount": 14548193.0,
+          "num_comments": 638
+        }
+      ],
+      "3": [
+        {
+          "videoId": 28672,
+          "video_title": "ESSENTIAL (all skin types)",
+          "topic_probability": 0.80888057,
+          "viewCount": 18.0,
+          "num_comments": 1
+        },
+        {
+          "videoId": 80543,
+          "video_title": "I Tried the Overnight Skin Transformation ✨ #shorts",
+          "topic_probability": 0.7949254,
+          "viewCount": 92.0,
+          "num_comments": 1
+        },
+        {
+          "videoId": 45714,
+          "video_title": "✨Heal With Me❤️😊#shorts #viralshorts #shortsfeed #trending #skincare #skintransformation #viral",
+          "topic_probability": 0.7701268,
+          "viewCount": 1054.0,
+          "num_comments": 2
+        }
+      ],
+      "4": [
+        {
+          "videoId": 86947,
+          "video_title": "Jadi Malu Diliatin Teman Kelas #makeup #makeuptutorial #makeupsekolah",
+          "topic_probability": 0.87780076,
+          "viewCount": 21570529.0,
+          "num_comments": 6235
+        },
+        {
+          "videoId": 53258,
+          "video_title": "Makeup Jawa dan Sunda✅ #makeup #makeuptutorial #makeupartist #wedding #makeuptransformation #mua",
+          "topic_probability": 0.8243793,
+          "viewCount": 2577924.0,
+          "num_comments": 272
+        },
+        {
+          "videoId": 13502,
+          "video_title": "Siger Sunda ▶️ #makeupartist #makeup #makeuptutorial #wedding #whatsappstatus",
+          "topic_probability": 0.8207822,
+          "viewCount": 7596431.0,
+          "num_comments": 75
+        }
+      ],
+      "5": [
+        {
+          "videoId": 60157,
+          "video_title": "Metode pijat wajah untuk memperbaharui sel kulit dan merangsang kolagen #antiaging",
+          "topic_probability": 0.62699616,
+          "viewCount": 1426.0,
+          "num_comments": 4
+        },
+        {
+          "videoId": 35149,
+          "video_title": "ABC blush😮😮😮#blush #shorts",
+          "topic_probability": 0.558262,
+          "viewCount": 21.0,
+          "num_comments": 1
+        },
+        {
+          "videoId": 2005,
+          "video_title": "Myntra kurta set haul shorts #myntra #shorts #trend #style",
+          "topic_probability": 0.55336463,
+          "viewCount": 528.0,
+          "num_comments": 1
+        }
+      ],
+      "6": [
+        {
+          "videoId": 2198,
+          "video_title": "WASH YOUR HAIR LIKE THIS TO PREVENT HAIRFALL",
+          "topic_probability": 0.9305635,
+          "viewCount": 79.0,
+          "num_comments": 1
+        },
+        {
+          "videoId": 72915,
+          "video_title": "Chandana &amp; Zenita Applying Hair Gel For Sleeklook #hairstyles To Buy Full Video Wtsap+91 9154004797",
+          "topic_probability": 0.8704558,
+          "viewCount": 1038.0,
+          "num_comments": 2
+        },
+        {
+          "videoId": 72125,
+          "video_title": "Models Chandana &amp; Zenita Applying HairGel For Sleek Look / To Buy Full Video Whatsapp +91 9154004797",
+          "topic_probability": 0.86699045,
+          "viewCount": 888.0,
+          "num_comments": 3
+        }
+      ],
+      "7": [
+        {
+          "videoId": 21700,
+          "video_title": "Korean Facial Yoga To Lift Whole Face | Anti-Aging Yoga 😱 #yoga #faceyoga #facial #facelift #shorts",
+          "topic_probability": 0.9284817,
+          "viewCount": 13256.0,
+          "num_comments": 1
+        },
+        {
+          "videoId": 75433,
+          "video_title": "One Simple Move For Full Face Firming &amp; Lifting | Korean Yoga 😱 #yoga #facialyoga #facelift #shorts",
+          "topic_probability": 0.9281161,
+          "viewCount": 29263.0,
+          "num_comments": 1
+        },
+        {
+          "videoId": 26013,
+          "video_title": "05 Actions For Firming &amp; Lifting The Whole Face | Age Reversing Yoga 😱 #yoga #fit #facelift #shorts",
+          "topic_probability": 0.92636925,
+          "viewCount": 18902.0,
+          "num_comments": 2
+        }
+      ],
+      "8": [
+        {
+          "videoId": 86258,
+          "video_title": "🔥How to become more attractive in 2 days | men&#39;s fashion tips#shorts#shortsfeed#mensfashion",
+          "topic_probability": 0.59484166,
+          "viewCount": 14142.0,
+          "num_comments": 5
+        },
+        {
+          "videoId": 42045,
+          "video_title": "Most 🔥Attractive Beard Style For Men | Beard Setting Guru Hairdressr |",
+          "topic_probability": 0.58920324,
+          "viewCount": 141.0,
+          "num_comments": 3
+        },
+        {
+          "videoId": 28386,
+          "video_title": "self grooming|mani padi|saloon visit|hair iron|uzma khan Official 4874|dubai life style",
+          "topic_probability": 0.5595281,
+          "viewCount": 71.0,
+          "num_comments": 1
+        }
+      ],
+      "9": [
+        {
+          "videoId": 5872,
+          "video_title": "DIORESSENCE &amp; PRIMARK #over50 #perfume #lowcost #primark #arreglateconmigo #getreadywithme",
+          "topic_probability": 0.9118944,
+          "viewCount": 17024.0,
+          "num_comments": 60
+        },
+        {
+          "videoId": 28613,
+          "video_title": "UNIQLO❤️HIPNOTIC POISON DIOR  #over50 #over50makeup #perfume #getreadywithme",
+          "topic_probability": 0.9080116,
+          "viewCount": 14507.0,
+          "num_comments": 88
+        },
+        {
+          "videoId": 3482,
+          "video_title": "UNIQLO❤️GLOSSY &amp; SHEGLAM #uniqlo #perfume #getreadywithme #maquillaje #over50",
+          "topic_probability": 0.89932996,
+          "viewCount": 24209.0,
+          "num_comments": 56
+        }
+      ],
+      "10": [
+        {
+          "videoId": 47961,
+          "video_title": "Is it look good .!!? 🤔🤔 #shorts #ytshorts #ashortaday #makeup #explorepage #foryou #korean",
+          "topic_probability": 0.73477376,
+          "viewCount": 15473.0,
+          "num_comments": 9
+        },
+        {
+          "videoId": 4015,
+          "video_title": "Kya khayal hai ? 😝 #blushmark #concealer   #makeupaddict #makeuptutorial #makeuptransformation",
+          "topic_probability": 0.70656055,
+          "viewCount": 3972.0,
+          "num_comments": 1
+        },
+        {
+          "videoId": 44199,
+          "video_title": "smile lips 👄#shorts",
+          "topic_probability": 0.66098195,
+          "viewCount": 2244.0,
+          "num_comments": 1
+        }
+      ],
+      "11": [
+        {
+          "videoId": 88865,
+          "video_title": "ПОЧЕМУ ЭТО НЕНАВИДЯТ? #beauty #beautyhack #skincare #makeup",
+          "topic_probability": 0.98526967,
+          "viewCount": 1004123.0,
+          "num_comments": 613
+        },
+        {
+          "videoId": 51078,
+          "video_title": "Знойная Латиноамериканка из Славянки! Latina Makeup 💅🏻",
+          "topic_probability": 0.9685336,
+          "viewCount": 3456943.0,
+          "num_comments": 618
+        },
+        {
+          "videoId": 82732,
+          "video_title": "ОБРАЗЫ С ШИРОКОЙ ГРУДНОЙ КЛЕТКОЙ #beauty #makeup #skincare #style #idols",
+          "topic_probability": 0.9595657,
+          "viewCount": 341793.0,
+          "num_comments": 114
+        }
+      ],
+      "12": [
+        {
+          "videoId": 26320,
+          "video_title": "cute boubou gown styles #boubou #bubu #lacestyles #africanfashion",
+          "topic_probability": 0.66964746,
+          "viewCount": 299751.0,
+          "num_comments": 2
+        },
+        {
+          "videoId": 3415,
+          "video_title": "Cutest African boubou gown styles #bubukaftan #bubu #boubou #kaftan",
+          "topic_probability": 0.6479452,
+          "viewCount": 318998.0,
+          "num_comments": 5
+        },
+        {
+          "videoId": 44588,
+          "video_title": "💖🌸 Cute hairstyles for 2024 brides | Hairstyles for black women | Natural hairstyles",
+          "topic_probability": 0.5126246,
+          "viewCount": 108097.0,
+          "num_comments": 12
+        }
+      ],
+      "13": [
+        {
+          "videoId": 85516,
+          "video_title": "Paulas Mascaras: Wer hat mehr Mascaras?? 🥹 @hearts4mascara",
+          "topic_probability": 0.75211143,
+          "viewCount": 4780713.0,
+          "num_comments": 2276
+        },
+        {
+          "videoId": 3606,
+          "video_title": "Clean Girl vs Messy Girl Trend",
+          "topic_probability": 0.66156536,
+          "viewCount": 237694.0,
+          "num_comments": 28
+        },
+        {
+          "videoId": 69872,
+          "video_title": "Tragt euren Bronzer NICHT so auf🙏🏻",
+          "topic_probability": 0.4910947,
+          "viewCount": 321633.0,
+          "num_comments": 40
+        }
+      ],
+      "14": [
+        {
+          "videoId": 5081,
+          "video_title": "♥️WINE🍷💀 #SHORTS #ytshortsindia #ashortaday #nyxcosmetics #nykaahaul #makeup #dailyvlog",
+          "topic_probability": 0.8209317,
+          "viewCount": 590.0,
+          "num_comments": 1
+        },
+        {
+          "videoId": 28151,
+          "video_title": "Quick simple and Easy Bridal makeup tutorial | Long lasting makeup @ #bridalmakeup #bridal #art",
+          "topic_probability": 0.7741051,
+          "viewCount": 117.0,
+          "num_comments": 4
+        },
+        {
+          "videoId": 2295,
+          "video_title": "Huda Beauty Blonzer #youtube #youtubeshorts #shorts #shortvideo #blush #blushes",
+          "topic_probability": 0.7669619,
+          "viewCount": 1325.0,
+          "num_comments": 3
+        }
+      ],
+      "15": [
+        {
+          "videoId": 40226,
+          "video_title": "Durga mata look🙏 #shorts #tiktok #viral #navratri #durgapuja #durga #durgamatamakeup",
+          "topic_probability": 0.8392632,
+          "viewCount": 1613217.0,
+          "num_comments": 112
+        },
+        {
+          "videoId": 19261,
+          "video_title": "Call - 9818485930 #hairstyle #hairlosstreatment #nishalambha",
+          "topic_probability": 0.78748137,
+          "viewCount": 24997.0,
+          "num_comments": 5
+        },
+        {
+          "videoId": 52654,
+          "video_title": "Beautiful and lovely couple || hair extension || long hair || Nishalambha",
+          "topic_probability": 0.7841439,
+          "viewCount": 275901.0,
+          "num_comments": 334
+        }
+      ],
+      "16": [
+        {
+          "videoId": 45471,
+          "video_title": "cute girl 💗VS attitude girl 🖤|| #eyeshadow👀 #dress 👗#nails💅 #car✨ #girl🎀 #@honey_editz4",
+          "topic_probability": 0.3837186,
+          "viewCount": 2177.0,
+          "num_comments": 4
+        },
+        {
+          "videoId": 61339,
+          "video_title": "Navratri looks Day 2 ❤️🤍✨ #navratri #bengali #bengalistyle #style #styling #saree #white #fashion",
+          "topic_probability": 0.3786262,
+          "viewCount": 781530.0,
+          "num_comments": 89
+        },
+        {
+          "videoId": 7666,
+          "video_title": "Lets get ready #ytshorts #telugu #shortvideo #fashion #youtubeshorts #skincare #makeup",
+          "topic_probability": 0.36994976,
+          "viewCount": 8060.0,
+          "num_comments": 19
+        }
+      ],
+      "17": [
+        {
+          "videoId": 26616,
+          "video_title": "Kim Kardashians anti-aging treatments",
+          "topic_probability": 0.646096,
+          "viewCount": 4316.0,
+          "num_comments": 6
+        },
+        {
+          "videoId": 22,
+          "video_title": "The Art of Double Cleansing: Achieve a Deep Cleanse",
+          "topic_probability": 0.6276087,
+          "viewCount": 1512.0,
+          "num_comments": 2
+        },
+        {
+          "videoId": 9254,
+          "video_title": "KYLIE JENNER DOES HER LIPLINER WITH HER EYES CLOSED?!!😯 #kyliejenner #shorts #viral #kardashians",
+          "topic_probability": 0.535387,
+          "viewCount": 28215.0,
+          "num_comments": 8
+        }
+      ],
+      "18": [
+        {
+          "videoId": 77184,
+          "video_title": "Buttery Caramel highlights | Ribbon highlights | balayage highlights | #highlights #caramelhighlight",
+          "topic_probability": 0.73154885,
+          "viewCount": 8769.0,
+          "num_comments": 2
+        },
+        {
+          "videoId": 25263,
+          "video_title": "hair transformation| #highlights | Balayage hair highlights| #hair #hairstyle #youtubes",
+          "topic_probability": 0.6794108,
+          "viewCount": 528.0,
+          "num_comments": 2
+        },
+        {
+          "videoId": 51364,
+          "video_title": "Long Layered Haircut Before and After 💇 | professional Hair Style |  Layer cut |women Hair cut",
+          "topic_probability": 0.56953794,
+          "viewCount": 1780.0,
+          "num_comments": 7
+        }
+      ],
+      "19": [
+        {
+          "videoId": 10104,
+          "video_title": "eye makeup look",
+          "topic_probability": 0.666339,
+          "viewCount": 5853.0,
+          "num_comments": 2
+        },
+        {
+          "videoId": 32956,
+          "video_title": "Face Look Beauty Care Muzaffarpur ☎️ 8797102026 #hairtreatment #reelsvideo #reels",
+          "topic_probability": 0.5963975,
+          "viewCount": 587.0,
+          "num_comments": 38
+        },
+        {
+          "videoId": 38994,
+          "video_title": "Maharashtrian Bridal Makeup Look Created With @keautybeauty5521 Professional Makeup Products 💄",
+          "topic_probability": 0.49981543,
+          "viewCount": 33049.0,
+          "num_comments": 3
+        }
+      ],
+      "20": [
+        {
+          "videoId": 70408,
+          "video_title": "hip up cream",
+          "topic_probability": 0.9661014,
+          "viewCount": 2010.0,
+          "num_comments": 849
+        },
+        {
+          "videoId": 16274,
+          "video_title": "Should I do more of these? 👀☕️",
+          "topic_probability": 0.8062609,
+          "viewCount": 7767.0,
+          "num_comments": 3
+        },
+        {
+          "videoId": 79162,
+          "video_title": "Sexy Middle Eastern Perfumes",
+          "topic_probability": 0.77772605,
+          "viewCount": 1360.0,
+          "num_comments": 6
+        }
+      ],
+      "21": [
+        {
+          "videoId": 47014,
+          "video_title": "POV: that one girl in a TRIO… #preppyyyy #beautyindustry #skincareaddict #beautyproducts #makeup",
+          "topic_probability": 0.8460148,
+          "viewCount": 2489255.0,
+          "num_comments": 744
+        },
+        {
+          "videoId": 71791,
+          "video_title": "I cant be the only one🙄",
+          "topic_probability": 0.8337274,
+          "viewCount": 4866296.0,
+          "num_comments": 4117
+        },
+        {
+          "videoId": 86518,
+          "video_title": "Definitely a slay🤭 #fashion #fashioninspo #skinnyjeans #style #styleinspo",
+          "topic_probability": 0.8044585,
+          "viewCount": 4737712.0,
+          "num_comments": 2035
+        }
+      ],
+      "22": [
+        {
+          "videoId": 39000,
+          "video_title": "Hi😬 #makeupchallenge #foundation #transformation #makeuptutorial #melinataj",
+          "topic_probability": 0.73338157,
+          "viewCount": 100573.0,
+          "num_comments": 29
+        },
+        {
+          "videoId": 73367,
+          "video_title": "#beauty#skincare#makeup#wow",
+          "topic_probability": 0.5744025,
+          "viewCount": 42103.0,
+          "num_comments": 2
+        },
+        {
+          "videoId": 29930,
+          "video_title": "Viral Hair colour Spray 🤮#shorts #tiktok #haircolor #youtubeshorts #beauty #viralmakeup",
+          "topic_probability": 0.5282979,
+          "viewCount": 32880.0,
+          "num_comments": 14
+        }
+      ],
+      "23": [
+        {
+          "videoId": 11298,
+          "video_title": "See Rihanna&#39;s Face Without Makeup #rihanna #fentybeauty #rihannafenty",
+          "topic_probability": 0.3161955,
+          "viewCount": 317.0,
+          "num_comments": 1
+        }
+      ],
+      "24": [
+        {
+          "videoId": 33725,
+          "video_title": "beautyfull#1m  #makeuptutorial#makeuptips #makeuptransformation #fashion#viralvideo #shorts#ootd",
+          "topic_probability": 0.47307637,
+          "viewCount": 8330.0,
+          "num_comments": 1
+        },
+        {
+          "videoId": 87786,
+          "video_title": "New hair clip🎗#subscribe #youtubeshorts #beautiful #viralvideo #1000subscribernew #dance #wedding",
+          "topic_probability": 0.40874493,
+          "viewCount": 11645.0,
+          "num_comments": 1
+        },
+        {
+          "videoId": 87664,
+          "video_title": "Beautiful hairstyle 💐 #ytshorts #hairstyle #subscribe #trending #styling #shorts #youtubeshorts",
+          "topic_probability": 0.39747202,
+          "viewCount": 1693.0,
+          "num_comments": 2
+        }
+      ],
+      "25": [
+        {
+          "videoId": 42585,
+          "video_title": "🇮🇳Indian Vs 🇰🇷Korean Makeup Challenge🤩| #shorts | SUGAR Cosmetics",
+          "topic_probability": 0.63940394,
+          "viewCount": 18458491.0,
+          "num_comments": 1394
+        },
+        {
+          "videoId": 11017,
+          "video_title": "🇮🇳Indian Vs 🇰🇷Korean Makeup Challenge🤩| #shorts | SUGAR Cosmetics",
+          "topic_probability": 0.6195878,
+          "viewCount": 2978427.0,
+          "num_comments": 5755
+        },
+        {
+          "videoId": 31185,
+          "video_title": "India Makeup Vs England Makeup #shorts #makeuptutorial #makeuptransformation #barshapatra",
+          "topic_probability": 0.61139435,
+          "viewCount": 16784085.0,
+          "num_comments": 624
+        }
+      ]
+    },
+    "total_topics": 26,
+    "total_videos": 34949,
+    "coherence_score": 0.531
+  },
+  "video_statistics": {
+    "top_by_comments": [
+      {
+        "videoId": 32656,
+        "video_title": "Which is your favortie? #hairstyle #shortvideo #shorts #short",
+        "num_comments": 47437,
+        "viewCount": 83582866.0,
+        "dominullt_topic": 20
+      },
+      {
+        "videoId": 58551,
+        "video_title": "BALD, Blonde, or Ginger???",
+        "num_comments": 31591,
+        "viewCount": 8440332.0,
+        "dominullt_topic": 1
+      },
+      {
+        "videoId": 76480,
+        "video_title": "🇮🇳Indian Vs 🇵🇰Pakistan Makeup Look😍 | #shorts | SUGAR⁩ Cosmetics",
+        "num_comments": 28222,
+        "viewCount": 29828258.0,
+        "dominullt_topic": 25
+      },
+      {
+        "videoId": 51351,
+        "video_title": "☀️Day Vs🌙Night Makeup Look😍 | #shorts | SUGAR⁩ Cosmetics",
+        "num_comments": 27568,
+        "viewCount": 21864631.0,
+        "dominullt_topic": 3
+      },
+      {
+        "videoId": 69445,
+        "video_title": "what men think no makeup is #makeup",
+        "num_comments": 25887,
+        "viewCount": 73583132.0,
+        "dominullt_topic": 21
+      },
+      {
+        "videoId": 16282,
+        "video_title": "Hindu Bride Vs Muslim Bride Makeup Look😍 | #shorts | SUGAR⁩ Cosmetics",
+        "num_comments": 22702,
+        "viewCount": 34533879.0,
+        "dominullt_topic": 10
+      },
+      {
+        "videoId": 55433,
+        "video_title": "This is how I face my tapes #transformation #facetape #faceliftathome #facelift",
+        "num_comments": 22154,
+        "viewCount": 68297186.0,
+        "dominullt_topic": 21
+      },
+      {
+        "videoId": 18248,
+        "video_title": "Handsome where ?? 😂 trans women are women 🏳️‍⚧️ #transandproud #makeupremoval #makeup",
+        "num_comments": 21342,
+        "viewCount": 25294867.0,
+        "dominullt_topic": 21
+      },
+      {
+        "videoId": 40498,
+        "video_title": "I know it’s late but.. Happy International Women’s Day 🫶🏻✨ #internationalwomensday #makeup",
+        "num_comments": 18771,
+        "viewCount": 46884435.0,
+        "dominullt_topic": 21
+      },
+      {
+        "videoId": 76940,
+        "video_title": "Bhayanker chij choose my makeup 😱||#thesastamakeup #makeup #funny #shorts",
+        "num_comments": 18682,
+        "viewCount": 9364516.0,
+        "dominullt_topic": 10
+      }
+    ],
+    "top_by_views": [
+      {
+        "videoId": 14688,
+        "video_title": "Korean Secret Glowing Skin Mask | Beauty Secrets| Look Beautiful #shorts",
+        "viewCount": 405748145.0,
+        "num_comments": 2782,
+        "dominullt_topic": 21
+      },
+      {
+        "videoId": 78245,
+        "video_title": "Sydney Sweeney Perfecting the Shot",
+        "viewCount": 264368764.0,
+        "num_comments": 2150,
+        "dominullt_topic": 20
+      },
+      {
+        "videoId": 59850,
+        "video_title": "it’s FREAKY FRIDAY!! Her brows are made of GEMS…",
+        "viewCount": 252195721.0,
+        "num_comments": 5092,
+        "dominullt_topic": 21
+      },
+      {
+        "videoId": 37027,
+        "video_title": "beauty tips #Korean #eyebrows setting #youtube #short #subscribe",
+        "viewCount": 173000294.0,
+        "num_comments": 1034,
+        "dominullt_topic": 11
+      },
+      {
+        "videoId": 47096,
+        "video_title": "Rate this transition ⭐️#shorts #youtubeshorts #makeup #makeuptransition #missgarg #makeupshorts #1m",
+        "viewCount": 162728811.0,
+        "num_comments": 10324,
+        "dominullt_topic": 10
+      },
+      {
+        "videoId": 21710,
+        "video_title": "Every girls can be gorgeous after make up",
+        "viewCount": 114243754.0,
+        "num_comments": 6691,
+        "dominullt_topic": 21
+      },
+      {
+        "videoId": 54587,
+        "video_title": "White Men Wear Wigs Too &amp; FAKE Man Beard 👏🏼❤️",
+        "viewCount": 110070379.0,
+        "num_comments": 1051,
+        "dominullt_topic": 21
+      },
+      {
+        "videoId": 53550,
+        "video_title": "IT’S FREAK FRIDAY! THAT WAS CRAZY",
+        "viewCount": 107817155.0,
+        "num_comments": 3143,
+        "dominullt_topic": 1
+      },
+      {
+        "videoId": 4110,
+        "video_title": "I think I used to much of the bronzing drops…",
+        "viewCount": 102571469.0,
+        "num_comments": 1820,
+        "dominullt_topic": 1
+      },
+      {
+        "videoId": 59625,
+        "video_title": "We just used the SAME makeup wipe on our BALD heads… 😅",
+        "viewCount": 102235199.0,
+        "num_comments": 6323,
+        "dominullt_topic": 1
+      }
+    ],
+    "top_engagement": [
+      {
+        "videoId": 31248,
+        "video_title": "The Art of VIDEO EDITING: Balancing Artistic Vision and Technical Precision",
+        "comment_ratio": null,
+        "viewCount": 0.0,
+        "num_comments": 1
+      },
+      {
+        "videoId": 51127,
+        "video_title": "The Art of VIDEO EDITING: Balancing Artistic Vision and Technical Precision",
+        "comment_ratio": null,
+        "viewCount": 0.0,
+        "num_comments": 1
+      },
+      {
+        "videoId": 56090,
+        "video_title": "The Key to Skin Barrier Repair: Restoring and Strengthening Your Skin&#39;s Defense",
+        "comment_ratio": null,
+        "viewCount": 0.0,
+        "num_comments": 1
+      },
+      {
+        "videoId": 86177,
+        "video_title": "Full Face NOTHING OVER $10 AFFORDABLE Makeup Tutorial #Shorts",
+        "comment_ratio": null,
+        "viewCount": 0.0,
+        "num_comments": 1
+      },
+      {
+        "videoId": 90696,
+        "video_title": "makeup makeup. law of attraction. face mask",
+        "comment_ratio": null,
+        "viewCount": 0.0,
+        "num_comments": 1
+      },
+      {
+        "videoId": 46225,
+        "video_title": "Real #cute #skincare",
+        "comment_ratio": 12460.0,
+        "viewCount": null,
+        "num_comments": 12460
+      },
+      {
+        "videoId": 75208,
+        "video_title": "It’s not just a hair change — it’s a life change!😭😭😭cr:@krewkutz_ #blackwoman #hairstylist #shorts",
+        "comment_ratio": 5232.0,
+        "viewCount": null,
+        "num_comments": 5232
+      },
+      {
+        "videoId": 43383,
+        "video_title": "power of makeup💄#douyin #song #makeup #makeuptutorial #transition#kpop#trending#makeuptransformation",
+        "comment_ratio": 1444.0,
+        "viewCount": null,
+        "num_comments": 1444
+      },
+      {
+        "videoId": 15013,
+        "video_title": "I CANT BE THE ONLY ONE. #preppysummer #preppy #preppyoreo #fypage #skincare",
+        "comment_ratio": 1170.0,
+        "viewCount": null,
+        "num_comments": 1170
+      },
+      {
+        "videoId": 70643,
+        "video_title": "power of makeup💄 #douyin #song #makeuptutorial#transition#makeup#trending#makeuptransformation#memes",
+        "comment_ratio": 833.0,
+        "viewCount": null,
+        "num_comments": 833
+      }
+    ],
+    "total_videos": 34949,
+    "total_comments": "3087679",
+    "total_views": 20797637064.0,
+    "avg_comments_per_video": 88.34813585510315,
+    "avg_views_per_video": 601400.6438031346
+  },
+  "coherence_optimization": [
+    {
+      "num_topics": 4,
+      "coherence_score": 0.415,
+      "is_optimal": false
+    },
+    {
+      "num_topics": 6,
+      "coherence_score": 0.472,
+      "is_optimal": false
+    },
+    {
+      "num_topics": 8,
+      "coherence_score": 0.477,
+      "is_optimal": false
+    },
+    {
+      "num_topics": 10,
+      "coherence_score": 0.48,
+      "is_optimal": false
+    },
+    {
+      "num_topics": 12,
+      "coherence_score": 0.478,
+      "is_optimal": false
+    },
+    {
+      "num_topics": 14,
+      "coherence_score": 0.507,
+      "is_optimal": false
+    },
+    {
+      "num_topics": 16,
+      "coherence_score": 0.505,
+      "is_optimal": false
+    },
+    {
+      "num_topics": 18,
+      "coherence_score": 0.5,
+      "is_optimal": false
+    },
+    {
+      "num_topics": 20,
+      "coherence_score": 0.52,
+      "is_optimal": false
+    },
+    {
+      "num_topics": 22,
+      "coherence_score": 0.519,
+      "is_optimal": false
+    },
+    {
+      "num_topics": 24,
+      "coherence_score": 0.485,
+      "is_optimal": false
+    },
+    {
+      "num_topics": 26,
+      "coherence_score": 0.494,
+      "is_optimal": true
+    },
+    {
+      "num_topics": 28,
+      "coherence_score": 0.531,
+      "is_optimal": false
+    },
+    {
+      "num_topics": 30,
+      "coherence_score": 0.5,
+      "is_optimal": false
+    }
+  ],
+  "extraction_timestamp": "2025-09-12T21:04:52.300268",
+  "summary": {
+    "total_videos": 34949,
+    "total_topics": 26,
+    "model_coherence": 0.531,
+    "data_quality": "High confidence spam detection with 93% accuracy"
+  }
+}

@@ -1,0 +1,4 @@
+GOOGLE_API_KEY=your_google_api_key_here
+DATABASE_URL=sqlite:///./loreai.db
+FRONTEND_URL=http://localhost:3000
+API_PORT=8000

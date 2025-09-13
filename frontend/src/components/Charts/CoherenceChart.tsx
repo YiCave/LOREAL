@@ -117,7 +117,31 @@ const CoherenceChart: React.FC = () => {
   };
 
   return (
-    <Card sx={{ height: '100%' }}>
+    <Card sx={{ 
+      height: '100%',
+      background: 'linear-gradient(135deg, rgba(20,25,40,0.95) 0%, rgba(30,35,50,0.95) 100%)',
+      border: '2px solid rgba(0,229,255,0.4)',
+      boxShadow: '0 0 30px rgba(0,229,255,0.3), 0 0 60px rgba(0,229,255,0.2), 0 8px 32px rgba(0,0,0,0.3)',
+      backdropFilter: 'blur(20px)',
+      position: 'relative',
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        borderRadius: 'inherit',
+        padding: '2px',
+        background: 'linear-gradient(45deg, #00E5FF, #00FF88, #FF4DFF, #00E5FF)',
+        backgroundSize: '300% 300%',
+        animation: 'gradientShift 3s ease-in-out infinite',
+        mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+        maskComposite: 'exclude',
+        WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+        WebkitMaskComposite: 'xor'
+      }
+    }}>
       <CardContent>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2 }}>
           <Box>

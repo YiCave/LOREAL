@@ -8,6 +8,7 @@ import TopicLeaderboard from './components/Topics/TopicLeaderboard';
 import CommentViewer from './components/Comments/CommentViewer';
 import PieChart3D from './components/Charts/PieChart3D';
 import CoherenceChart from './components/Charts/CoherenceChart';
+import AIAssistant from './components/AIAssistant/AIAssistant';
 import { 
   spamSamples, 
   qualityCommentSamples, 
@@ -30,6 +31,7 @@ import {
   Topic as TopicIcon,
   Comment as CommentIcon,
   Analytics as AnalyticsIcon,
+  SmartToy as AIIcon,
 } from '@mui/icons-material';
 
 const queryClient = new QueryClient();
@@ -63,6 +65,12 @@ const App: React.FC = () => {
       label: '📊 Model Performance', 
       icon: <AnalyticsIcon />, 
       description: 'Coherence Scores' 
+    },
+    { 
+      id: 'ai-assistant', 
+      label: '🤖 AI Assistant', 
+      icon: <AIIcon />, 
+      description: 'Business Insights & Help' 
     },
   ];
 
@@ -169,6 +177,81 @@ const App: React.FC = () => {
               Our AI-powered system automatically identifies spam and quality comments using 
               advanced Gaussian Mixture Model clustering with confidence-based filtering.
             </Typography>
+
+            {/* GMM Steps Component */}
+            <Box sx={{ 
+              mb: 4, 
+              p: 3, 
+              background: 'linear-gradient(135deg, rgba(0,229,255,0.1), rgba(0,255,136,0.1))',
+              borderRadius: 3,
+              border: '1px solid rgba(0,229,255,0.3)'
+            }}>
+              <Typography variant="h6" sx={{ 
+                color: '#00E5FF',
+                fontWeight: 600,
+                fontFamily: 'Orbitron, Arial, sans-serif',
+                mb: 2
+              }}>
+                🤖 GMM Classification Process
+              </Typography>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                  <Box sx={{ 
+                    width: 30, 
+                    height: 30, 
+                    borderRadius: '50%', 
+                    background: 'linear-gradient(135deg, #00E5FF, #00FF88)',
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    mr: 2,
+                    boxShadow: '0 0 10px rgba(0,229,255,0.5)'
+                  }}>
+                    <Typography variant="body2" fontWeight="600" sx={{ color: '#1E1E1E' }}>1</Typography>
+                  </Box>
+                  <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.9)' }}>
+                    Extract 20+ features from each comment
+                  </Typography>
+                </Box>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                  <Box sx={{ 
+                    width: 30, 
+                    height: 30, 
+                    borderRadius: '50%', 
+                    background: 'linear-gradient(135deg, #00FF88, #FF4DFF)',
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    mr: 2,
+                    boxShadow: '0 0 10px rgba(0,255,136,0.5)'
+                  }}>
+                    <Typography variant="body2" fontWeight="600" sx={{ color: '#1E1E1E' }}>2</Typography>
+                  </Box>
+                  <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.9)' }}>
+                    GMM clusters comments into 2 groups (spam vs quality)
+                  </Typography>
+                </Box>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                  <Box sx={{ 
+                    width: 30, 
+                    height: 30, 
+                    borderRadius: '50%', 
+                    background: 'linear-gradient(135deg, #FF4DFF, #FF3D5A)',
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    mr: 2,
+                    boxShadow: '0 0 10px rgba(255,77,255,0.5)'
+                  }}>
+                    <Typography variant="body2" fontWeight="600" sx={{ color: '#1E1E1E' }}>3</Typography>
+                  </Box>
+                  <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.9)' }}>
+                    Assign quality/spam labels with confidence scores
+                  </Typography>
+                </Box>
+              </Box>
+            </Box>
+
             <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(600px, 1fr))', gap: 3 }}>
               <CommentViewer 
                 comments={spamSamples} 
@@ -219,11 +302,13 @@ const App: React.FC = () => {
               backdropFilter: 'blur(10px)'
             }}>
               Coherence score optimization showing why we chose 26 topics as the optimal configuration 
-              for our L'Oréal beauty content analysis.
+              for our LOreAi beauty content analysis.
             </Typography>
             <CoherenceChart />
           </Box>
         );
+      case 'ai-assistant':
+        return <AIAssistant />;
       case 'quality3d':
         return (
           <Box sx={{ p: 3 }}>
@@ -263,20 +348,20 @@ const App: React.FC = () => {
         backdropFilter: 'blur(10px)'
       }}>
         <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-          <Avatar
+          <Box
+            component="img"
+            src="/logo.png"
+            alt="LOreAi Logo"
             sx={{ 
-              background: 'linear-gradient(45deg, #00E5FF, #00FF88)',
-              width: 48, 
-              height: 48, 
+              width: 48,
+              height: 48,
               mr: 2,
-              fontWeight: 700,
-              fontSize: '1.2rem',
+              borderRadius: '50%',
               boxShadow: '0 0 20px rgba(0,229,255,0.4)',
-              border: '2px solid rgba(0,229,255,0.3)'
+              border: '2px solid rgba(0,229,255,0.3)',
+              objectFit: 'cover'
             }}
-          >
-            L
-          </Avatar>
+          />
           <Box>
             <Typography variant="h6" fontWeight="700" sx={{
               background: 'linear-gradient(90deg, #00E5FF, #00FF88)',
@@ -284,7 +369,7 @@ const App: React.FC = () => {
               WebkitTextFillColor: 'transparent',
               fontSize: '1.1rem'
             }}>
-              L'Oréal AI
+              LOreAi
             </Typography>
             <Typography variant="caption" sx={{ 
               color: 'rgba(0,229,255,0.7)',
@@ -474,7 +559,7 @@ const App: React.FC = () => {
       @keyframes shimmer {
         0% { transform: translateX(-100%); }
         100% { transform: translateX(100%); }
-      }
+            }
           `}
         </style>
       </ThemeProvider>
