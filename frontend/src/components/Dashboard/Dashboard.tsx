@@ -249,7 +249,15 @@ const Dashboard: React.FC = () => {
                 </Pie>
                 <Tooltip 
                     formatter={(value: any, name: string) => [`${value.toLocaleString()} (${((value / qualityMetrics.total_comments) * 100).toFixed(1)}%)`, name]}
-                    contentStyle={{ background: '#181C2F', color: '#FF3D5A', borderRadius: 12, boxShadow: '0 0 12px #FF3D5A88' }}
+                    contentStyle={{ 
+                      background: 'rgba(255, 255, 255, 0.95)', 
+                      color: '#000000', 
+                      borderRadius: 12, 
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+                      border: '1px solid rgba(0, 229, 255, 0.5)',
+                      backdropFilter: 'blur(10px)'
+                    }}
+                    labelStyle={{ color: '#000000', fontWeight: '600' }}
                 />
                 <defs>
                   <radialGradient id="qualityGreen" cx="50%" cy="50%" r="50%">
