@@ -111,7 +111,7 @@ const AIAssistant: React.FC = () => {
       const fallbackMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
         type: 'ai',
-        content: `I understand you're asking about "${currentQuery}". Based on our real data analysis of 3.3M+ comments and 500K+ videos, I can provide insights on engagement patterns, content optimization, and performance benchmarks. However, I'm currently unable to connect to the backend service. Please ensure the LOreAi backend is running on http://localhost:8000 to get real-time AI insights!`,
+        content: `I understand you're asking about "${currentQuery}". Based on our real data analysis of 3.3M+ comments and 500K+ videos, I can provide insights on engagement patterns, content optimization, and performance benchmarks. However, I'm currently unable to connect to the backend service. Please ensure the LOreAi backend is running properly to get real-time AI insights!`,
         timestamp: new Date(),
       };
       setMessages(prev => [...prev, fallbackMessage]);
