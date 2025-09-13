@@ -13,14 +13,12 @@ import {
 } from '@mui/material';
 import {
   EmojiEvents as TrophyIcon,
-  KeyboardArrowRight as ArrowIcon,
   Close as CloseIcon,
   ExpandMore as ExpandMoreIcon,
   TrendingUp as TrendingIcon,
   Visibility as ViewIcon,
-  Comment as CommentIcon,
 } from '@mui/icons-material';
-import { topicDistribution, getTopicCoherence } from '../../services/dataService';
+import { topicDistribution } from '../../services/dataService';
 
 interface TopicLeaderboardProps {
   maxTopics?: number;
@@ -41,19 +39,6 @@ const TopicLeaderboard: React.FC<TopicLeaderboardProps> = ({ maxTopics = 10 }) =
     setDialogOpen(true);
   };
 
-  const getRankIcon = (rank: number) => {
-    if (rank === 1) return '🥇';
-    if (rank === 2) return '🥈';
-    if (rank === 3) return '🥉';
-    return rank.toString();
-  };
-
-  const getRankColor = (rank: number) => {
-    if (rank === 1) return '#FFD700';
-    if (rank === 2) return '#C0C0C0';
-    if (rank === 3) return '#CD7F32';
-    return '#666666';
-  };
 
   const TopicDetailDialog = () => {
     const topic = topicDistribution.find(t => t.topic_id === selectedTopic);
