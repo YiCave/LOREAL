@@ -222,7 +222,7 @@ const AIAssistant: React.FC = () => {
         flex: 1, 
         overflow: 'auto', 
         p: 3,
-        pb: '200px', // More padding for the input area
+        pb: '300px', // Increased padding to ensure messages don't go below input
         display: 'flex',
         flexDirection: 'column',
         gap: 2
@@ -290,13 +290,23 @@ const AIAssistant: React.FC = () => {
                     </Avatar>
                   )}
                   <Box sx={{ flex: 1 }}>
-                    <Typography variant="body1" sx={{ 
-                      color: 'white',
-                      lineHeight: 1.6,
-                      whiteSpace: 'pre-wrap'
-                    }}>
-                      {message.content}
-                    </Typography>
+                    <Typography 
+                      variant="body1" 
+                      sx={{ 
+                        color: 'white',
+                        lineHeight: 1.6,
+                        whiteSpace: 'pre-wrap',
+                        '& strong': {
+                          fontWeight: 'bold',
+                          color: '#00E5FF'
+                        },
+                        '& em': {
+                          fontStyle: 'italic',
+                          color: '#FF4DFF'
+                        }
+                      }}
+                      dangerouslySetInnerHTML={{ __html: message.content }}
+                    />
                     <Typography variant="caption" sx={{ 
                       color: 'rgba(255,255,255,0.5)',
                       display: 'block',

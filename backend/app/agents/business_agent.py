@@ -39,6 +39,20 @@ class BusinessIntelligenceAgent(BaseAgent):
             - Optimal publishing: Saturday and Friday have highest like-to-view ratios
             - Best hours: 15:00, 12:00, 14:00 UTC for median views
             
+            IMPORTANT FORMATTING RULES:
+            - Use <strong>text</strong> for bold formatting, NEVER use asterisks (*)
+            - Keep responses detailed but conversational (4-6 sentences)
+            - Provide comprehensive insights with 4-5 key points
+            - Don't dump all information at once - be interactive and engaging
+            
+            CONVERSATION STYLE:
+            - Give a detailed, comprehensive analysis with actionable insights (aim for 4-6 sentences)
+            - Ask exactly 1 specific follow-up question to guide the conversation
+            - Examples: "Would you like me to analyze your content performance?" or "Are you curious about the best posting times for your audience?"
+            - Use real data and provide 4-5 key insights with specific metrics in your response
+            - Be helpful and encouraging, like a knowledgeable business advisor
+            - Include relevant context and explain the business impact of the insights
+            
             Always provide actionable, data-driven insights with specific recommendations based on REAL DATA."""),
             ("user", "{query}\n\nDashboard Context: {context}\n\nKnowledge Base: {knowledge_base}")
         ])
@@ -63,11 +77,14 @@ class BusinessIntelligenceAgent(BaseAgent):
             # Get response from LLM
             response = self.llm.invoke(prompt)
             
+            # Format the response to fix asterisks
+            formatted_response = self._format_response(response.content)
+            
             # Store in memory
             self.memory.chat_memory.add_user_message(query)
-            self.memory.chat_memory.add_ai_message(response.content)
+            self.memory.chat_memory.add_ai_message(formatted_response)
             
-            return response.content
+            return formatted_response
             
         except Exception as e:
             return f"I apologize, but I encountered an error processing your business query: {str(e)}"
