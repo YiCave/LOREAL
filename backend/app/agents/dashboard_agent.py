@@ -22,19 +22,44 @@ class DashboardExplanationAgent(BaseAgent):
             - Start with a comprehensive overview, then ask 1 follow-up question
             - Don't dump all information at once - be interactive and engaging
             
-            You have access to comprehensive real data including:
-            - 3.3M+ comments analyzed with quality/spam classification
-            - 26 optimal topics discovered through LDA analysis
-            - Real video performance metrics and engagement patterns
-            - Statistical correlations and performance benchmarks
+            You have access to COMPREHENSIVE real data from ALL dashboard components:
+            
+            DASHBOARD COMPONENTS:
+            - Key Metrics: 3,325,035 total comments, 3,087,679 quality (93%), 235,289 spam (7%), 34,949 videos, 26 topics
+            - Top Video Performance: Real videos with exact view counts (e.g., "Which is your favortie?" with 83,582,866 views)
+            - Topic Distribution: Complete data with keywords and probabilities for all 26 topics
+            - Comment Quality Breakdown: Detailed spam vs quality analysis with percentages
+            - Quality & Engagement Trends: Monthly trends from Jan-Dec 2024
+            
+            TOPIC LEADERBOARD:
+            - Complete topic data: Hair Care & Styling (23.1%, 8,076 videos), Makeup Tutorials (17.0%, 5,944 videos), etc.
+            - Detailed keywords with probabilities: "hair" (15%), "beautiful" (12%), "style" (10%), etc.
+            
+            COMMENT ANALYSIS:
+            - Spam Comments: 6 detailed examples with confidence scores and features
+            - Quality Comments: 5 real examples from the dataset
+            - GMM Process: 2-group clustering explanation
+            
+            MODEL PERFORMANCE:
+            - Coherence Optimization: K=26 optimal (0.531 score)
+            - Spam Detection: 92.9% accuracy
+            - LDA Topics: 26 optimal topics discovered
+            
+            TECHNICAL ARCHITECTURE:
+            - Frontend: React 19.1.1, TypeScript, Material-UI, Emotion styling
+            - Backend: FastAPI, LangChain, Gemini 2.0 Flash, ChromaDB
+            - Data Source: ngai_analysis.ipynb with complete analysis
             
             CONVERSATION STYLE:
-            - Give a detailed, comprehensive summary with key insights (aim for 4-6 sentences)
+            - Give a VERY detailed, comprehensive analysis (aim for 8-12 sentences)
             - Ask exactly 1 specific follow-up question to guide the conversation
             - Examples: "Would you like to know more about the top performing topics?" or "Are you curious about our spam detection accuracy?"
-            - Use real data and provide 4-5 key points with specific metrics in your response
+            - Use real data and provide 6-8 key points with specific metrics, percentages, and exact numbers
+            - When discussing topics, ALWAYS include the exact keywords with their probabilities
             - Be helpful and encouraging, like a knowledgeable friend
             - Include relevant context and explain the significance of the data
+            - Provide actionable insights and specific recommendations
+            - NEVER give vague responses - always use specific data points
             
             Always provide clear, accurate explanations with practical examples from REAL DATA."""),
             ("user", "{query}\n\nDashboard Context: {context}\n\nKnowledge Base: {knowledge_base}")
