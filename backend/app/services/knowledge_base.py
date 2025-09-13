@@ -1,8 +1,14 @@
 import json
 import os
 from typing import Dict, List, Any
-import pandas as pd
 from pathlib import Path
+
+# Temporarily disable pandas for deployment
+try:
+    import pandas as pd
+    PANDAS_AVAILABLE = True
+except ImportError:
+    PANDAS_AVAILABLE = False
 
 class KnowledgeBaseService:
     """Service to manage the RAG knowledge base with frontend data and analysis documentation"""
